@@ -1,6 +1,6 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     background: linear-gradient(135deg, black, teal, blue, purple);
     color: white;
     margin: 0;
@@ -17,17 +17,18 @@ header h1 {
 header p {
     font-style: italic;
 }
-nav a {
-    margin: 0 1rem;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
 main {
     padding: 2rem;
 }
 section {
     margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 ul {
     list-style: none;
@@ -43,18 +44,33 @@ a {
 a:hover {
     color: yellow;
 }
-.discord-button {
+.discord-button, .sponsor-button, .linkedin-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #7289da;
     border-radius: 25px;
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin: 0.5rem 0.5rem 0 0;
+}
+.discord-button {
+    background-color: #7289da;
 }
 .discord-button:hover {
     background-color: #5b6eae;
+}
+.sponsor-button {
+    background-color: #ff69b4;
+}
+.sponsor-button:hover {
+    background-color: #e055a2;
+}
+.linkedin-button {
+    background-color: #0077b5;
+}
+.linkedin-button:hover {
+    background-color: #005a87;
 }
 footer {
     text-align: center;

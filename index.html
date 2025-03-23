@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamie Vargas Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
         <p>Developer, mischief manager, and professional problem solver. Mostly.</p>
     </header>
     <main>
-        <section id="projects" class="fade-in">
+        <section id="projects">
             <h2>Projects</h2>
             <ul>
                 <li><a href="https://jmenichole.github.io/CollectClock/" target="_blank">CollectClock</a> — a community hub for gambling strategies, bonus chats, and collecting streaks.</li>
@@ -23,42 +23,27 @@
                 <li><a href="https://jmenichole.github.io/random-joke/" target="_blank">Random Joke Generator</a> — because sometimes humor is the best productivity hack.</li>
             </ul>
         </section>
-        <section id="writing" class="fade-in">
+        <section id="writing">
             <h2>Writing</h2>
             <p>Check out my author page on <a href="https://theinscribermag.com/author/jchapman7a6f80ed954/" target="_blank">The Inscriber Magazine</a>, where I cover topics that matter.</p>
         </section>
-        <section id="startup" class="fade-in">
+        <section id="startup">
             <h2>Startup Work</h2>
             <p>Mischief Manager — Mental health, financial well-being, habit-building, and impulse control helper. Designed to keep you grounded and focused.</p>
         </section>
-        <section id="contact" class="fade-in">
+        <section id="contact">
             <h2>Contact</h2>
             <p>Find me on <a href="https://github.com/jmenichole" target="_blank">GitHub</a>, email me at <a href="mailto:your-email@example.com">your-email@example.com</a>, or call/text me at <strong>850-867-0087</strong>.</p>
-            <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank" class="sponsor-button">Sponsor Me on GitHub</a>
-            <a href="https://www.linkedin.com/in/jmenichole0" target="_blank" class="linkedin-button">Connect on LinkedIn</a>
         </section>
-        <section id="discord" class="fade-in">
+        <section id="discord">
             <h2>Join My Discord</h2>
-            <p>Come hang out with me on Discord for a community for social gambling bonus strategies and poker <strong>BetCollective</strong>.</p>
+            <p>Come hang out with me on Discord! Whether you're here for chaos, mischief, productivity hacks, or gambling bonus strategies… you belong in <strong>BetCollective</strong>.</p>
             <a href="https://discord.gg/q4K9n9hEpR" target="_blank" class="discord-button">Join BetCollective</a>
             <p>Find me there as <strong>jmenichole</strong></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Jamie Vargas | Playful portfolio powered by coffee & code. Last updated: March 2025.</p>
+        <p>&copy; 2025 Jamie Vargas | Playful portfolio powered by coffee & code.</p>
     </footer>
-
-    <script>
-        const fadeIns = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        });
-        fadeIns.forEach(section => observer.observe(section));
-    </script>
 </body>
 </html>
-
