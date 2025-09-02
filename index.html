@@ -10,88 +10,70 @@
 <body>
     <header>
         <h1>Jamie Vargas</h1>
-        <p>Startup Founder & Bot Developer</p>
+        <p class="one-liner">1-of-1 Solutionist, bot builder, tilt professional, code enthusiast. Just fakin’ it til I automate it.</p>
+        <p class="tagline">Made for degens by degens ❤️</p>
     </header>
 
     <main>
         <section id="projects" class="fade-in">
             <h2>Projects</h2>
-            <div class="cards">
-
-                <div class="card">
-                    <h3>CollectClock</h3>
-                    <p>Tracking and timer system for casino bonus links.</p>
-                    <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="btn">View Project</a>
-                </div>
-
-                <div class="card">
-                    <h3>Degen’s Card Bot</h3>
-                    <p>Cards Against Humanity-style game for chronically online millennials.</p>
-                    <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn">Discord Link</a>
-                </div>
-
-                <div class="card">
-                    <h3>FreeSpins Finder</h3>
-                    <p>Automates submission and announcements of non-referral free spin links from community members.</p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
-
-                <div class="card">
-                    <h3>Airdrop Gatekeeper</h3>
-                    <p>Informs users if they are not qualified to collect an airdrop based on admin-set rules.</p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
-
-                <div class="card">
+            <div class="cards-grid">
+                <a href="https://tiltcheckecosystem.created.app/degens-bot" target="_blank" class="card">
+                    <h3>Degen's Card Bot</h3>
+                    <p>Cards Against Humanity for chronically online millennials. <br><strong><a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank">Discord Link</a></strong></p>
+                </a>
+                <a href="https://traphousediscordbot.created.app" target="_blank" class="card">
+                    <h3>Trap House Bot</h3>
+                    <p>Trap house styled bot turned loan mob empire, community fun & roles.</p>
+                </a>
+                <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank" class="card">
                     <h3>JustTheTip</h3>
                     <p>Crypto tipping bot for Discord.</p>
-                    <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank" class="btn">View Project</a>
-                </div>
-
-                <div class="card">
-                    <h3>Trap House Bot</h3>
-                    <p>Originally Trap House-styled bot for fun/roles, now a Loan Mob Empire roleplay bot.</p>
-                    <a href="https://traphousediscordbot.created.app" target="_blank" class="btn">View Project</a>
-                </div>
-
+                </a>
+                <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="card">
+                    <h3>CollectClock</h3>
+                    <p>Tracks & timers for casino links.</p>
+                </a>
+                <a href="#" target="_blank" class="card coming-soon">
+                    <h3>FreeSpins Finder</h3>
+                    <p>Automates submission & posting of free spin links after mod approval.</p>
+                </a>
+                <a href="#" target="_blank" class="card coming-soon">
+                    <h3>Airdrop Gatekeeper</h3>
+                    <p>Checks if users are qualified to collect airdrops based on server admin rules.</p>
+                </a>
             </div>
+        </section>
+
+        <section id="startup" class="fade-in">
+            <h2>Startup Work</h2>
+            <p>Mischief Manager — Mental health, financial well-being, habit-building, and impulse control helper. Tracks habits and helps break cycles.</p>
         </section>
 
         <section id="contact" class="fade-in">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a></p>
-            <p>Discord: <strong>jmenichole</strong></p>
-            <p>
-                <a href="https://discord.gg/q4K9n9hEpR" target="_blank" class="btn">Join BetCollective</a>
-                <a href="https://www.linkedin.com/in/jmenichole0" target="_blank" class="btn">LinkedIn</a>
-                <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank" class="btn">GitHub Sponsors</a>
-            </p>
+            <p>GitHub: <a href="https://github.com/jmenichole" target="_blank">jmenichole</a></p>
+            <p>GitHub Sponsors: <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank">Support My Work</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jmenichole0" target="_blank">Connect</a></p>
+            <p>Discord Server: <a href="https://discord.gg/q4K9n9hEpR" target="_blank">BetCollective</a></p>
         </section>
     </main>
 
     <footer>
-        <p>Made for Degens by Degens ❤️</p>
-        <p>&copy; 2025 Jamie Vargas</p>
+        <p>&copy; 2025 Jamie Vargas | Powered by coffee and code</p>
     </footer>
 
     <script>
-        // Fade-in animation on scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                appearOnScroll.unobserve(entry.target);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
         });
+        fadeIns.forEach(section => observer.observe(section));
     </script>
 </body>
 </html>
