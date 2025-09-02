@@ -8,96 +8,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Jamie Vargas</h1>
-            <p>Developer & Bot Creator</p>
-            <p class="animated-text">CollectClock | Degen’s Card Bot | JustTheTip | Trap House Bot | Free Spins Bot | Airdrop Gatekeeper</p>
-        </div>
-    </section>
+    <header>
+        <h1>Jamie Vargas</h1>
+        <p>Startup Founder & Bot Developer</p>
+    </header>
 
     <main>
         <section id="projects" class="fade-in">
             <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
+            <div class="cards">
+
+                <div class="card">
                     <h3>CollectClock</h3>
-                    <iframe src="https://jmenichole.github.io/CollectClock/" title="CollectClock"></iframe>
-                    <p>Track casino bonuses with countdown timers and stats.</p>
-                    <a href="https://jmenichole.github.io/CollectClock/" target="_blank">View Project</a>
+                    <p>Tracking and timer system for casino bonus links.</p>
+                    <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="btn">View Project</a>
                 </div>
-                <div class="project-card">
+
+                <div class="card">
                     <h3>Degen’s Card Bot</h3>
-                    <iframe src="https://tiltcheckecosystem.created.app/degens-bot" title="Degen's Card Bot"></iframe>
-                    <p>Cards Against Humanity for chronically online millennials.</p>
-                    <a href="https://tiltcheckecosystem.created.app/degens-bot" target="_blank">View Project</a>
+                    <p>Cards Against Humanity-style game for chronically online millennials.</p>
+                    <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn">Discord Link</a>
                 </div>
-                <div class="project-card">
-                    <h3>JustTheTip</h3>
-                    <iframe src="https://tiltcheckecosystem.created.app/justthetip" title="JustTheTip"></iframe>
-                    <p>Crypto tipping bot for Discord servers.</p>
-                    <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank">View Project</a>
+
+                <div class="card">
+                    <h3>FreeSpins Finder</h3>
+                    <p>Automates submission and announcements of non-referral free spin links from community members.</p>
+                    <a href="#" class="btn">View Project</a>
                 </div>
-                <div class="project-card">
-                    <h3>Trap House Bot</h3>
-                    <iframe src="https://traphousediscordbot.created.app" title="Trap House Bot"></iframe>
-                    <p>Community fun/roles bot turned loan mob empire.</p>
-                    <a href="https://traphousediscordbot.created.app" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Free Spins Bot</h3>
-                    <p>Submit free spin links; auto-posted to Discord after mod approval.</p>
-                    <a href="#" target="_blank">Coming Soon</a>
-                </div>
-                <div class="project-card">
+
+                <div class="card">
                     <h3>Airdrop Gatekeeper</h3>
-                    <p>Manage role-based access to airdrops in Discord servers.</p>
-                    <a href="#" target="_blank">Coming Soon</a>
+                    <p>Informs users if they are not qualified to collect an airdrop based on admin-set rules.</p>
+                    <a href="#" class="btn">View Project</a>
                 </div>
+
+                <div class="card">
+                    <h3>JustTheTip</h3>
+                    <p>Crypto tipping bot for Discord.</p>
+                    <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank" class="btn">View Project</a>
+                </div>
+
+                <div class="card">
+                    <h3>Trap House Bot</h3>
+                    <p>Originally Trap House-styled bot for fun/roles, now a Loan Mob Empire roleplay bot.</p>
+                    <a href="https://traphousediscordbot.created.app" target="_blank" class="btn">View Project</a>
+                </div>
+
             </div>
         </section>
 
         <section id="contact" class="fade-in">
-            <h2>Contact & Connect</h2>
+            <h2>Contact</h2>
             <p>Email: <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jmenichole0" target="_blank">Connect on LinkedIn</a></p>
-            <p>GitHub Sponsors: <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank">Support My Work</a></p>
-            <p>Discord: <a href="https://discord.gg/q4K9n9hEpR" target="_blank">Bet Collective</a> (find me as <strong>jmenichole</strong>)</p>
+            <p>Discord: <strong>jmenichole</strong></p>
+            <p>
+                <a href="https://discord.gg/q4K9n9hEpR" target="_blank" class="btn">Join BetCollective</a>
+                <a href="https://www.linkedin.com/in/jmenichole0" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank" class="btn">GitHub Sponsors</a>
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Jamie Vargas | Powered by coffee and code | Made for degens by degens ❤️</p>
+        <p>Made for Degens by Degens ❤️</p>
+        <p>&copy; 2025 Jamie Vargas</p>
     </footer>
 
     <script>
-        // Fade-in sections
-        const fadeIns = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver(entries => {
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
             });
-        });
-        fadeIns.forEach(section => observer.observe(section));
+        }, appearOptions);
 
-        // Animated Text
-        const textEl = document.querySelector('.animated-text');
-        const phrases = [
-            'CollectClock', 
-            'Degen’s Card Bot', 
-            'JustTheTip', 
-            'Trap House Bot', 
-            'Free Spins Bot', 
-            'Airdrop Gatekeeper'
-        ];
-        let i = 0;
-        setInterval(() => {
-            textEl.textContent = phrases[i % phrases.length];
-            i++;
-        }, 2000);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
     </script>
 </body>
 </html>
