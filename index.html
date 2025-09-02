@@ -8,10 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Jamie Vargas</h1>
-        <p>Developer & Bot Creator</p>
-    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Jamie Vargas</h1>
+            <p>Developer & Bot Creator</p>
+            <p class="animated-text">CollectClock | Degen’s Card Bot | JustTheTip | Trap House Bot | Free Spins Bot | Airdrop Gatekeeper</p>
+        </div>
+    </section>
 
     <main>
         <section id="projects" class="fade-in">
@@ -23,34 +27,29 @@
                     <p>Track casino bonuses with countdown timers and stats.</p>
                     <a href="https://jmenichole.github.io/CollectClock/" target="_blank">View Project</a>
                 </div>
-
                 <div class="project-card">
                     <h3>Degen’s Card Bot</h3>
                     <iframe src="https://tiltcheckecosystem.created.app/degens-bot" title="Degen's Card Bot"></iframe>
                     <p>Cards Against Humanity for chronically online millennials.</p>
                     <a href="https://tiltcheckecosystem.created.app/degens-bot" target="_blank">View Project</a>
                 </div>
-
                 <div class="project-card">
                     <h3>JustTheTip</h3>
                     <iframe src="https://tiltcheckecosystem.created.app/justthetip" title="JustTheTip"></iframe>
                     <p>Crypto tipping bot for Discord servers.</p>
                     <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank">View Project</a>
                 </div>
-
                 <div class="project-card">
                     <h3>Trap House Bot</h3>
                     <iframe src="https://traphousediscordbot.created.app" title="Trap House Bot"></iframe>
                     <p>Community fun/roles bot turned loan mob empire.</p>
                     <a href="https://traphousediscordbot.created.app" target="_blank">View Project</a>
                 </div>
-
                 <div class="project-card">
                     <h3>Free Spins Bot</h3>
                     <p>Submit free spin links; auto-posted to Discord after mod approval.</p>
                     <a href="#" target="_blank">Coming Soon</a>
                 </div>
-
                 <div class="project-card">
                     <h3>Airdrop Gatekeeper</h3>
                     <p>Manage role-based access to airdrops in Discord servers.</p>
@@ -73,6 +72,7 @@
     </footer>
 
     <script>
+        // Fade-in sections
         const fadeIns = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -82,6 +82,22 @@
             });
         });
         fadeIns.forEach(section => observer.observe(section));
+
+        // Animated Text
+        const textEl = document.querySelector('.animated-text');
+        const phrases = [
+            'CollectClock', 
+            'Degen’s Card Bot', 
+            'JustTheTip', 
+            'Trap House Bot', 
+            'Free Spins Bot', 
+            'Airdrop Gatekeeper'
+        ];
+        let i = 0;
+        setInterval(() => {
+            textEl.textContent = phrases[i % phrases.length];
+            i++;
+        }, 2000);
     </script>
 </body>
 </html>
