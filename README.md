@@ -29,6 +29,7 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 
 ### Web Applications
 - **CollectClock** - Time management and productivity tool with live demo available
+- **PorterPlays** - Leaderboard and community hub for gaming platforms with prize pool tracking
 
 ## 🚀 Deployment
 
