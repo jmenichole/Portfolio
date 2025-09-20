@@ -30,6 +30,11 @@
     
     --transition: all 0.2s ease-in-out;
     --transition-slow: all 0.3s ease-in-out;
+    
+    /* Mobile specific variables */
+    --mobile-touch-target: 44px;
+    --mobile-padding: 1rem;
+    --mobile-padding-sm: 0.75rem;
 }
 
 * {
@@ -38,16 +43,27 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Mobile optimizations */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Mobile touch optimizations */
+a, button, [role="button"] {
+    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
+    touch-action: manipulation;
+}
+
+/* Improved scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .container {
@@ -127,6 +143,17 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 0.5rem;
+    min-width: var(--mobile-touch-target);
+    min-height: var(--mobile-touch-target);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.hamburger:hover {
+    background-color: var(--bg-card-hover);
 }
 
 .bar {
@@ -224,6 +251,9 @@ body {
     text-decoration: none;
     transition: var(--transition);
     border: 2px solid transparent;
+    min-height: var(--mobile-touch-target);
+    justify-content: center;
+    text-align: center;
 }
 
 .btn-primary {
@@ -867,7 +897,7 @@ footer {
     }
 
     .nav-menu li {
-        margin: 0.5rem 0;
+        margin: 0.25rem 0;
     }
 
     .nav-link {
@@ -875,9 +905,14 @@ footer {
         padding: 1rem 2rem;
         font-size: 1.1rem;
         transition: var(--transition);
+        min-height: var(--mobile-touch-target);
+        display: flex;
+        align-items: center;
+        border-radius: var(--border-radius);
+        margin: 0 1rem;
     }
 
-    .nav-link:hover {
+    .nav-link:hover, .nav-link:focus {
         background-color: var(--bg-card-hover);
         color: var(--secondary-color);
     }
@@ -885,10 +920,16 @@ footer {
     .hamburger {
         display: flex;
         padding: 0.5rem;
-        min-width: 44px;
-        min-height: 44px;
+        min-width: var(--mobile-touch-target);
+        min-height: var(--mobile-touch-target);
         align-items: center;
         justify-content: center;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    .hamburger:hover {
+        background-color: var(--bg-card-hover);
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -1016,23 +1057,26 @@ footer {
 
 @media (max-width: 480px) {
     .nav-container {
-        padding: 1rem;
+        padding: var(--mobile-padding);
     }
     
     .name {
         font-size: 2rem;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
         font-size: 1.1rem;
+        line-height: 1.3;
     }
     
     .btn-primary,
     .btn-secondary {
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 1.5rem;
         font-size: 0.9rem;
         width: 100%;
-        max-width: 260px;
+        max-width: 280px;
+        min-height: var(--mobile-touch-target);
     }
     
     .cards-grid,
@@ -1044,19 +1088,21 @@ footer {
     .card,
     .repo-card {
         padding: 1.5rem;
+        border-radius: var(--border-radius-lg);
     }
 
     .contact-method {
-        padding: 1rem;
+        padding: var(--mobile-padding);
+        border-radius: var(--border-radius-lg);
     }
 
     .hero-container,
     .container {
-        padding: 0 1rem;
+        padding: 0 var(--mobile-padding);
     }
 
     section {
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
 
     section h2 {
@@ -1066,8 +1112,7 @@ footer {
     .hero-description {
         font-size: 0.95rem;
     }
-}
-    
+
     .card,
     .repo-card {
         padding: 1.5rem;
@@ -1078,39 +1123,45 @@ footer {
 @media (max-width: 360px) {
     .hero-container,
     .container {
-        padding: 0 0.75rem;
+        padding: 0 var(--mobile-padding-sm);
     }
 
     .name {
         font-size: 1.8rem;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
         font-size: 1rem;
+        line-height: 1.3;
     }
 
     .nav-container {
-        padding: 0.75rem;
+        padding: var(--mobile-padding-sm);
     }
 
     .btn-primary,
     .btn-secondary {
-        padding: 0.75rem 1rem;
+        padding: 1rem;
         font-size: 0.85rem;
-        max-width: 240px;
+        max-width: 260px;
+        min-height: var(--mobile-touch-target);
     }
 
     .card,
     .repo-card {
-        padding: 1rem;
+        padding: var(--mobile-padding);
+        border-radius: var(--border-radius);
     }
 
     .contact-method {
-        padding: 0.75rem;
+        padding: var(--mobile-padding-sm);
+        border-radius: var(--border-radius);
     }
 
     section h2 {
         font-size: 1.5rem;
+        line-height: 1.2;
     }
 
     .code-content {
