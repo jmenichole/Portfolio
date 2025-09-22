@@ -26,10 +26,13 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 - **Rock Spotter App** - Social platform for geological finds
 - **Trap House Bot** - Complete community management solution
 - **Airdrop Gatekeeper** - Intelligent verification system
+- **Degen's Game Arena** - Full-scale game arena site with tournament system
 
 ### Web Applications
 - **CollectClock** - Time management and productivity tool with live demo available
-- **PorterPlays** - Leaderboard and community hub for gaming platforms with prize pool tracking
+- **Porter Plays Leaderboard** - Leaderboard and community hub for gaming platforms with prize pool tracking
+- **Stake Engine Submission** - Advanced betting engine with automated validation and analytics
+- **Tarot of Fate** - Interactive tarot card reading game with mystical animations
 
 ## 🚀 Deployment
 
