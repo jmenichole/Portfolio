@@ -723,6 +723,14 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
     <script>
         // Fade-in animation observer
         const fadeIns = document.querySelectorAll('.fade-in');
@@ -772,6 +780,60 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollCurrent = window.pageYOffset;
+            const scrollPercentage = (scrollCurrent / scrollTotal) * 100;
+            scrollProgress.style.width = scrollPercentage + '%';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Enhanced scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const enhancedObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.style.animationFillMode = 'forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe skill categories for staggered animations
+        document.querySelectorAll('.skill-category').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+            enhancedObserver.observe(el);
+        });
+
+        // Observe cards for staggered animations
+        document.querySelectorAll('.card, .achievement-card').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+            enhancedObserver.observe(el);
         });
     </script>
 </body>
