@@ -583,6 +583,19 @@ html {
 /* Section Styles */
 section {
     padding: 5rem 0;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    opacity: 0.6;
 }
 
 section h2 {
@@ -590,10 +603,42 @@ section h2 {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientText 4s ease-in-out infinite;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    animation: expandWidth 1s ease-out 0.5s forwards;
+    width: 0;
+}
+
+@keyframes gradientText {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes expandWidth {
+    to {
+        width: 60px;
+    }
 }
 
 .section-subtitle {
@@ -672,13 +717,15 @@ section h2 {
 }
 
 .achievement-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: rgba(30, 30, 47, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-lg);
     padding: 2rem;
-    transition: var(--transition);
+    transition: var(--transition-slow);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .achievement-card::before {
@@ -688,13 +735,26 @@ section h2 {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    animation: shimmerTop 3s ease-in-out infinite;
+}
+
+@keyframes shimmerTop {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateX(-10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
 }
 
 .achievement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--primary-color);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(30, 30, 47, 0.8);
 }
 
 .achievement-icon {
@@ -707,6 +767,15 @@ section h2 {
     justify-content: center;
     font-size: 1.5rem;
     color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+    transition: var(--transition);
+}
+
+.achievement-card:hover .achievement-icon {
+    transform: rotateY(180deg) scale(1.1);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.4);
+}
     margin-bottom: 1.5rem;
     flex-shrink: 0;
 }
@@ -778,6 +847,20 @@ section h2 {
 /* Skills Section */
 .skills-section {
     background: var(--bg-secondary);
+    position: relative;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .skills-grid {
@@ -903,19 +986,39 @@ section h2 {
 }
 
 .card {
-    background: var(--bg-card);
+    background: rgba(30, 30, 47, 0.7);
+    backdrop-filter: blur(15px);
     border-radius: var(--border-radius-lg);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     transition: var(--transition-slow);
     display: flex;
     flex-direction: column;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+}
+
+.card:hover::before {
+    transform: translateX(100%);
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: var(--primary-color);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(30, 30, 47, 0.8);
 }
 
 /* Mobile-specific card improvements */
@@ -1481,6 +1584,55 @@ footer {
 html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    z-index: 9999;
+    transition: width 0.3s ease;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-slow);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, var(--primary-hover), var(--secondary-color));
+}
+
+.scroll-top-btn:active {
+    transform: translateY(-1px) scale(1.05);
 }
 
 /* Enhanced focus states for accessibility */
