@@ -12,7 +12,9 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: HTML5, CSS3, JavaScript
+- **Frontend**: HTML5, CSS3, JavaScript, TypeScript
+- **Backend**: Node.js, Discord.js, Express, MongoDB
+- **Blockchain**: Solana, Smart Contracts, Web3.js, Non-custodial Systems
 - **Styling**: Custom CSS with CSS Grid and Flexbox
 - **Fonts**: Inter and JetBrains Mono from Google Fonts
 - **Icons**: Font Awesome 6
@@ -21,6 +23,7 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 ## 📦 Projects Featured
 
 ### Discord Bots & Applications
+- **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK with TypeScript SDK and multi-chain support
 - **TiltCheck Ecosystem** - Comprehensive betting analysis platform
 - **Mischief Manager** - Mental health protection application
 - **Rock Spotter App** - Social platform for geological finds
@@ -30,7 +33,8 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 
 ### Web Applications
 - **CollectClock** - Time management and productivity tool with live demo available
-- **Porter Plays Leaderboard** - Leaderboard and community hub for gaming platforms with prize pool tracking
+- **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK for Discord communities with TypeScript SDK and multi-chain support
+- **Porter Plays Leaderboard** - Modern real-time wager leaderboard platform with admin dashboard, multi-casino integration, and VIP transfer programs
 - **Stake Engine Submission** - Advanced betting engine with automated validation and analytics
 - **Tarot of Fate** - Interactive tarot card reading game with mystical animations
 
