@@ -42,10 +42,11 @@
                         <span class="greeting">Hi, I'm</span>
                         <span class="name">Jamie Vargas</span>
                     </h1>
-                    <h2 class="hero-subtitle">Full Stack Developer & Bot Engineer</h2>
+                    <h2 class="hero-subtitle"><span id="typing-text">Full Stack Developer & Bot Engineer</span><span class="cursor-blink">|</span></h2>
                     <p class="hero-description">
                         Passionate developer specializing in Discord bot development, web applications, and automation solutions. 
                         I create innovative tools that solve real-world problems and enhance user experiences.
+                        <span class="easter-egg" title="Plot twist: The bugs fix themselves when I stare at them long enough 🐛">*</span>
                     </p>
                     <div class="hero-buttons">
                         <a href="#repository-showcase" class="btn-primary">View My Work</a>
@@ -91,9 +92,10 @@
                             <div class="stat-number">8+</div>
                             <div class="stat-label">Active Discord Bots</div>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">∞</div>
+                        <div class="stat" data-tooltip="Fueled by caffeine & code">
+                            <div class="stat-number" id="coffee-counter">∞</div>
                             <div class="stat-label">Coffee Consumed</div>
+                            <div class="stat-subtext">☕ (and counting...)</div>
                         </div>
                     </div>
                 </div>
@@ -164,55 +166,163 @@
         <section id="skills" class="skills-section fade-in">
             <div class="container">
                 <h2>Skills & Technologies</h2>
+                <p class="section-subtitle">Stack so full, it occasionally overflows <span class="easter-egg" title="Get it? Stack overflow? 😏">😉</span></p>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-category" data-category="languages">
                         <h3><i class="fas fa-code"></i> Languages</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-category="backend">
                         <h3><i class="fas fa-server"></i> Backend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Discord.js</span>
-                            <span class="skill-tag">Express</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                            <span class="skill-tag">MongoDB</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="93"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Discord.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="96"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">RESTful APIs</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-category="blockchain">
                         <h3><i class="fas fa-cube"></i> Blockchain & Crypto</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Solana</span>
-                            <span class="skill-tag">Smart Contracts</span>
-                            <span class="skill-tag">Web3.js</span>
-                            <span class="skill-tag">TypeScript SDK</span>
-                            <span class="skill-tag">Non-Custodial Systems</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Solana</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Smart Contracts</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Web3.js</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-category="frontend">
                         <h3><i class="fas fa-window-maximize"></i> Frontend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Progressive Web Apps</span>
-                            <span class="skill-tag">Responsive Design</span>
-                            <span class="skill-tag">Modern CSS</span>
-                            <span class="skill-tag">JavaScript ES6+</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Progressive Web Apps</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="94"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Modern CSS</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-category" data-category="tools">
+                        <h3><i class="fas fa-tools"></i> Tools & Superpowers</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Git & GitHub</span>
-                            <span class="skill-tag">Discord Bot Development</span>
+                            <span class="skill-tag" data-tooltip="I commit more than I should">Git & GitHub</span>
+                            <span class="skill-tag" data-tooltip="Bots that don't bot">Discord Bot Development</span>
                             <span class="skill-tag">Real-time Data Processing</span>
                             <span class="skill-tag">API Integration</span>
-                            <span class="skill-tag">Database Security</span>
-                            <span class="skill-tag">Automation</span>
+                            <span class="skill-tag" data-tooltip="Fort Knox approved">Database Security</span>
+                            <span class="skill-tag" data-tooltip="Because who needs sleep?">Automation</span>
                         </div>
                     </div>
                 </div>
@@ -966,6 +1076,214 @@
         document.querySelectorAll('.card, .achievement-card').forEach((el, index) => {
             el.style.animationDelay = `${index * 0.1}s`;
             enhancedObserver.observe(el);
+        });
+
+        // ===== ENHANCED INTERACTIVE FEATURES =====
+        
+        // Dynamic typing effect for hero subtitle
+        const typingTexts = [
+            'Full Stack Developer & Bot Engineer',
+            'Code Wizard & Bug Whisperer',
+            'Caffeinated Code Composer',
+            'Discord Bot Architect',
+            'Professional Degen Developer'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function typeEffect() {
+            const typingElement = document.getElementById('typing-text');
+            if (!typingElement) return;
+
+            const currentText = typingTexts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let speed = isDeleting ? deletingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+            }
+
+            setTimeout(typeEffect, speed);
+        }
+
+        // Start typing effect after initial page load
+        setTimeout(typeEffect, 1000);
+
+        // Animated skill bars
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            const progress = bar.getAttribute('data-progress');
+                            bar.style.width = progress + '%';
+                        }, index * 100);
+                    });
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.skill-category').forEach(category => {
+            skillObserver.observe(category);
+        });
+
+        // 3D Tilt effect for cards
+        document.querySelectorAll('.card, .repo-card, .achievement-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Coffee counter easter egg - animates on hover
+        const coffeeCounter = document.getElementById('coffee-counter');
+        let coffeeCount = 0;
+        let coffeeInterval;
+        
+        if (coffeeCounter) {
+            coffeeCounter.parentElement.addEventListener('mouseenter', () => {
+                coffeeInterval = setInterval(() => {
+                    coffeeCount++;
+                    coffeeCounter.textContent = coffeeCount;
+                    if (coffeeCount >= 9999) {
+                        coffeeCounter.textContent = '∞';
+                        coffeeCount = 0;
+                        clearInterval(coffeeInterval);
+                    }
+                }, 50);
+            });
+            
+            coffeeCounter.parentElement.addEventListener('mouseleave', () => {
+                clearInterval(coffeeInterval);
+                setTimeout(() => {
+                    coffeeCounter.textContent = '∞';
+                    coffeeCount = 0;
+                }, 1000);
+            });
+        }
+
+        // Interactive code preview - highlights on hover
+        const codePreview = document.querySelector('.code-preview');
+        if (codePreview) {
+            codePreview.addEventListener('mouseenter', () => {
+                codePreview.style.transform = 'scale(1.02)';
+            });
+            
+            codePreview.addEventListener('mouseleave', () => {
+                codePreview.style.transform = 'scale(1)';
+            });
+        }
+
+        // Enhanced tooltip system
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseenter', (e) => {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'custom-tooltip';
+                tooltip.textContent = e.target.getAttribute('data-tooltip');
+                document.body.appendChild(tooltip);
+                
+                const rect = e.target.getBoundingClientRect();
+                tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+                
+                setTimeout(() => tooltip.classList.add('show'), 10);
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                const tooltip = document.querySelector('.custom-tooltip');
+                if (tooltip) {
+                    tooltip.classList.remove('show');
+                    setTimeout(() => tooltip.remove(), 300);
+                }
+            });
+        });
+
+        // Particle cursor trail effect
+        const particles = [];
+        const maxParticles = 20;
+        
+        document.addEventListener('mousemove', (e) => {
+            if (particles.length < maxParticles) {
+                const particle = document.createElement('div');
+                particle.className = 'cursor-particle';
+                particle.style.left = e.pageX + 'px';
+                particle.style.top = e.pageY + 'px';
+                document.body.appendChild(particle);
+                particles.push(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                    particles.shift();
+                }, 1000);
+            }
+        });
+
+        // Konami code easter egg
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                document.body.style.animation = 'rainbow 2s ease-in-out';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                    alert('🎉 Achievement Unlocked: You found the secret! You\'re clearly a person of culture. 🎮');
+                }, 2000);
+            }
+        });
+
+        // Smooth reveal for repo cards on scroll
+        const repoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 50);
+                    repoObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.repo-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            repoObserver.observe(card);
         });
     </script>
 </body>
