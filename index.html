@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jamie Vargas | Portfolio</title>
+  <title>Jamie Vargas | Full Stack Developer & Bot Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo"><span class="logo-text">Jme</span></a>
+      <a href="#home" class="nav-logo"><span class="logo-text">Jme</span></a>
       <ul class="nav-menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <div class="hamburger">
+      <div class="hamburger" id="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -27,17 +30,125 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-text">
-          <span class="greeting">Hey there 👋</span>
-          <h1 class="name">I'm Jamie Vargas</h1>
+          <span class="greeting">👋 Hey, I'm</span>
+          <h1 class="name">Jamie Vargas<span class="cursor-blink">|</span></h1>
           <h2 class="hero-subtitle">Full Stack Developer & Bot Engineer</h2>
-          <p class="hero-description">Building bots, apps, and ecosystems with a focus on Discord automation, Web3, and responsible gambling tools. Coffee-fueled coder ☕.</p>
+          <p class="hero-description">
+            I design and build Discord bots, web applications, and blockchain tools that empower online communities and solve real-world challenges.
+          </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
-            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <p class="section-subtitle">Discord bots, web apps, and tools built for fun and impact.</p>
+      <div class="cards-grid">
+        
+        <!-- Degens Bot -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-robot"></i></div>
+            <h3>Degens Bot</h3>
+          </div>
+          <p>Discord bot providing automated game management, community features, and interactive entertainment for gaming communities.</p>
+          <div class="card-tech">
+            <span class="tech-tag">Discord.js</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Bot Development</span>
+          </div>
+          <div class="card-links">
+            <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn-card">
+              <i class="fas fa-external-link-alt"></i> Add Bot
+            </a>
+          </div>
+        </div>
+
+        <!-- Game Arena -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+            <h3>Degen's Game Arena</h3>
+          </div>
+          <p>Cards Against Humanity-style game platform with multiplayer support, tournament hosting, and leaderboards.</p>
+          <div class="card-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">WebSocket</span>
+          </div>
+          <div class="card-links">
+            <a href="https://degens-against-decency-dg0gb56.public.builtwithrocket.new" target="_blank" class="btn-card">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Rock Spotter -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-gem"></i></div>
+            <h3>Rock Spotter</h3>
+          </div>
+          <p>Mobile-friendly app for geology fans to share rock finds, join hunts, and learn about geology in fun interactive ways.</p>
+          <div class="card-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vercel</span>
+            <span class="tech-tag">Geolocation</span>
+          </div>
+          <div class="card-links">
+            <a href="https://jmenichole.github.io/Rock-Spotter/" target="_blank" class="btn-card">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/jmenichole/Rock-Spotter-App" target="_blank" class="btn-card">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <p class="section-subtitle">Technologies I use regularly</p>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-robot"></i> Bots & Blockchain</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Discord.js</span>
+            <span class="skill-tag">Solana</span>
+            <span class="skill-tag">Web3.js</span>
           </div>
         </div>
       </div>
@@ -46,136 +157,24 @@
 
   <!-- About -->
   <section id="about">
-    <div class="container fade-in">
+    <div class="container">
       <h2>About Me</h2>
-      <p class="section-subtitle">Developer of degen tools and blockchain-powered bots</p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills-section">
-    <div class="container fade-in">
-      <h2>Skills</h2>
-      <p class="section-subtitle">A quick look at what I bring to the table</p>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">Solidity</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-server"></i> Frameworks</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Discord.js</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Databases</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">SQLite</span>
-            <span class="skill-tag">Postgres</span>
-          </div>
+      <p class="section-subtitle">Passionate about tech, community, and building solutions</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">Hi, I'm Jamie!</p>
+          <p>I’m a full stack developer and bot engineer with a love for creating interactive tools. Whether it’s automating Discord communities, building fun game arenas, or experimenting with blockchain, I thrive at the intersection of code and creativity.</p>
+          <p class="easter-egg">☕ Coffee consumed this week: too much.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Projects -->
-  <section id="projects" class="repository-section">
-    <div class="container fade-in">
-      <h2>Projects</h2>
-      <p class="section-subtitle">A showcase of Discord bots, web apps, and experiments</p>
-
-      <div class="repo-grid">
-
-        <!-- Featured Degens Against Decency -->
-        <div class="repo-card featured">
-          <div class="repo-header">
-            <h3>Degens Against Decency</h3>
-          </div>
-          <div class="iframe-wrapper" style="height:400px; overflow:hidden; border-radius:8px;">
-            <iframe src="https://degens-against-decency-dg0gb56.public.builtwithrocket.new"
-              width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <p>Cards Against Humanity–style Discord game built for chronically online discord population. Interactive, chaotic, and fun.</p>
-          <div class="repo-links">
-            <a href="https://degens-against-decency-dg0gb56.public.builtwithrocket.new" class="btn-repo live" target="_blank">Live Demo</a>
-            <a href="https://github.com/jmenichole/DegensAgainstDecency" class="btn-repo" target="_blank">View Code</a>
-          </div>
-        </div>
-
-        <!-- JustTheTip -->
-        <div class="repo-card">
-          <div class="repo-header">
-            <h3>JustTheTip Bot</h3>
-          </div>
-          <p>Non-custodial Solana tipping bot for Discord. TypeScript SDK, microtransactions, and NFT-based trust system (coming soon).</p>
-          <div class="repo-links">
-            <a href="https://jmenichole.github.io/Justthetip/" class="btn-repo live" target="_blank">Live Demo</a>
-            <a href="https://github.com/jmenichole/JustTheTip" class="btn-repo" target="_blank">View Code</a>
-          </div>
-        </div>
-
-       <div class="repo-card">
-        <div class="repo-header">
-          <h3>Rock Spotter</h3>
-        </div>
-        <p>Social platform for geology enthusiasts. Share finds, join I-Spy hunts, and connect with other rock hunters.</p>
-        <div class="repo-links">
-          <a href="https://jmenichole.github.io/Rock-Spotter/" class="btn-repo live" target="_blank">Live Demo</a>
-          <a href="https://github.com/jmenichole/Rock-Spotter-App" class="btn-repo" target="_blank">View Code</a>
-        </div>
-      </div>
-
-        <!-- CollectClock -->
-        <div class="repo-card">
-          <div class="repo-header">
-            <h3>CollectClock</h3>
-          </div>
-          <p>Casino bonus tracker with Discord integration. Helps players organize and maximize rewards.</p>
-          <div class="repo-links">
-            <a href="https://jmenichole.github.io/CollectClock/" class="btn-repo live" target="_blank">Live Demo</a>
-            <a href="https://github.com/jmenichole/CollectClock" class="btn-repo" target="_blank">View Code</a>
-          </div>
-        </div>
-<!-- QualifyFirst -->
-      <div class="repo-card">
-        <div class="repo-header">
-          <h3>QualifyFirst</h3>
-        </div>
-        <p>Survey matching app that instantly connects users to surveys without disqualification mid-way.</p>
-        <div class="repo-links">
-          <a href="https://qualifyfirst.vercel.app/" class="btn-repo live" target="_blank">Live Demo</a>
-          <a href="https://github.com/jmenichole/QualifyFirst" class="btn-repo" target="_blank">View Code</a>
-        </div>
-      </div>
-        <!-- Porter Plays -->
-        <div class="repo-card">
-          <div class="repo-header">
-            <h3>Porter Plays Leaderboard</h3>
-          </div>
-          <p>Wager leaderboard and rewards dashboard for casino streamers. Includes VIP transfer modules.</p>
-          <div class="repo-links">
-            <a href="https://jmenichole.github.io/PorterPlays/" class="btn-repo live" target="_blank">Live Demo</a>
-            <a href="https://github.com/jmenichole/PorterPlays" class="btn-repo" target="_blank">View Code</a>
-          </div>
-        </div>
-
-     >
 
   <!-- Contact -->
   <section id="contact" class="contact-section">
-    <div class="container fade-in">
+    <div class="container">
       <h2>Contact</h2>
-      <p class="section-subtitle">Let's connect</p>
+      <p class="section-subtitle">Let’s collaborate or just say hi 👋</p>
       <div class="contact-info">
         <div class="contact-method">
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -188,26 +187,66 @@
           <div class="contact-icon"><i class="fab fa-github"></i></div>
           <div class="contact-details">
             <h3>GitHub</h3>
-            <a href="https://github.com/jmenichole">@jmenichole</a>
+            <a href="https://github.com/jmenichole" target="_blank">github.com/jmenichole</a>
           </div>
         </div>
         <div class="contact-method">
           <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
           <div class="contact-details">
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/jmenichole0">jmenichole0</a>
+            <a href="https://linkedin.com/in/jmenichole0" target="_blank">linkedin.com/in/jmenichole0</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-text"><p>© 2025 Jamie Vargas. Made for degens ❤️ by degens.</p></div>
+    <div class="container footer-content">
+      <div class="footer-text">
+        <p>© 2025 Jamie Vargas. Made for degens ❤️ by degens.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/jmenichole"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/jmenichole0"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:jmenichole007@outlook.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </footer>
 
-  <script src="index.js"></script>
+  <button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Navbar toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Scroll progress
+    const scrollProgress = document.getElementById("scrollProgress");
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
+    });
+
+    // Scroll top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
