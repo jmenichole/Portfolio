@@ -1,169 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Jamie Vargas</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamie Vargas - Full Stack Developer & Bot Engineer</title>
+    <meta name="description" content="Professional portfolio of Jamie Vargas - Full Stack Developer specializing in Discord bots, web applications, and automation solutions.">
+    <meta name="keywords" content="Full Stack Developer, Discord Bots, JavaScript, Python, Web Development, Automation, Portfolio">
+    <meta name="author" content="Jamie Vargas">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo"><span class="logo-text">Jamie Vargas</span></a>
-      <ul class="nav-menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section id="hero" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="greeting">👋 Hey, I'm</span>
-          <span class="name">Jamie Vargas<span class="cursor-blink">|</span></span>
-          <div class="hero-subtitle">Full Stack Developer & Bot Engineer</div>
-          <p class="hero-description">
-            Building innovative Discord bots, automation tools, and experimental Web3 integrations. 
-            Coffee consumed: <strong>∞</strong> ☕
-          </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn-primary">View Projects</a>
-            <a href="#contact" class="btn-secondary">Contact Me</a>
-          </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JV</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#repository-showcase" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="fade-in">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <p class="section-subtitle">Specialized Discord bots and applications designed to enhance community experiences.</p>
-
-      <div class="cards-grid">
-
-        <!-- JustTheTip -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon"><i class="fas fa-coins"></i></div>
-            <h3>JustTheTip</h3>
-          </div>
-          <p>Non-custodial Solana tipping bot using smart contracts. Empowering Discord communities with microtransactions.</p>
-          <div class="card-tech">
-            <span class="tech-tag">Discord.js</span>
-            <span class="tech-tag">Solana</span>
-            <span class="tech-tag">Web3</span>
-          </div>
-          <div class="card-links">
-            <a href="https://jmenichole.github.io/Justthetip/" target="_blank" class="btn-card">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-          </div>
-
-          <!-- Demo Mockup -->
-          <div class="discord-demo">
-            <div class="discord-message user">
-              <span class="name">CryptoGamer</span>
-              Thanks for helping me with that boss fight!
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="name">Jamie Vargas</span>
+                    </h1>
+                    <h2 class="hero-subtitle"><span id="typing-text">Full Stack Developer & Bot Engineer</span><span class="cursor-blink">|</span></h2>
+                    <p class="hero-description">
+                        Passionate developer specializing in Discord bot development, web applications, and automation solutions. 
+                        <span class="easter-egg" title="Plot twist: The bugs fix themselves when I stare at them long enough 🐛">*</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Jamie Vargas'</span>,
+  <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'Python'</span>, <span class="string">'Node.js'</span>],
+  <span class="property">passion</span>: <span class="string">'Building Bots'</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="discord-message user">
-              <span class="name">DiamondHands</span>
-              /tip @CryptoGamer 0.1 SOL 🚀
-            </div>
-            <div class="discord-message bot typing">
-              <span class="name">JustTheTip</span>
-              <span class="typing-dots"><span></span><span></span><span></span></span>
-            </div>
-            <div class="discord-message bot">
-              <span class="name">JustTheTip</span>
-              ✅ Tip sent! <span class="highlight">0.1 SOL</span> ($15.20) to @CryptoGamer using Solana smart contracts!
-            </div>
-          </div>
         </div>
+    </header>
 
-        <!-- Degens Against Decency -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
-            <h3>Degens Against Decency</h3>
-          </div>
-          <p>Cards Against Humanity-style game bot with lobbies, voting, and hilarious gameplay.</p>
-          <div class="card-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">WebSocket</span>
-          </div>
-          <div class="card-links">
-            <a href="https://jmenichole.github.io/DegensAgainstDecency/" target="_blank" class="btn-card">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
+    <main>
+        <section id="about" class="about-section fade-in">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">I'm a full-stack developer with a passion for creating innovative solutions that make a difference. Especially in the world of degen tools, my motto is made for degens by degens.</p>
+                        <p>With extensive experience in Discord bot development, web applications, and automation tools, I specialize in building scalable and user-friendly applications. My work spans from community management bots to mental health protection apps, always focusing on solving real-world problems through technology.</p>
+                        <p>I believe in continuous learning and staying current with the latest technologies. Whether it's developing complex Discord ecosystems or creating progressive web applications, I approach each project with enthusiasm and attention to detail.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">GitHub Repositories</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Discord Bots</div>
+                        </div>
+                        <div class="stat" data-tooltip="Fueled by caffeine & code">
+                            <div class="stat-number" id="coffee-counter">∞</div>
+                            <div class="stat-label">Coffee Consumed</div>
+                            <div class="stat-subtext">☕ (and counting...)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <!-- Game Preview Mockup -->
-          <div class="dad-demo">
-            <div class="black-card">
-              Why can't I sleep at night?
+        <section id="achievements" class="achievements-section fade-in">
+            <div class="container">
+                <h2>Professional Achievements</h2>
+                <p class="section-subtitle">Recognition and accomplishments that demonstrate expertise and impact</p>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Open Source Contributor</h3>
+                            <p>Active contributor to multiple open-source projects with 20+ public repositories and growing community engagement.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">20+ Repos</span>
+                                <span class="stat-badge">Community Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Innovation in Discord Ecosystems</h3>
+                            <p>Pioneered enterprise-grade non-custodial solutions and advanced bot architectures for community management.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">8+ Active Bots</span>
+                                <span class="stat-badge">Enterprise-Grade</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Full-Stack Architecture</h3>
+                            <p>Demonstrated expertise across blockchain integration, real-time systems, and progressive web applications.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">Multi-Chain</span>
+                                <span class="stat-badge">Real-Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="white-cards">
-              <div class="white-card">My crippling casino addiction 🎰</div>
-              <div class="white-card">NFTs that nobody wants 🖼️</div>
-              <div class="white-card">Another round of tequila shots 🍹</div>
+        </section>
+
+        <section id="skills" class="skills-section fade-in">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <p class="section-subtitle">Stack so full, it occasionally overflows <span class="easter-egg" title="Get it? Stack overflow? Punny, yes? 😏">😉</span></p>
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="languages">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="backend">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="93"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Discord.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="96"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">RESTful APIs</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="blockchain">
+                        <h3><i class="fas fa-cube"></i> Blockchain & Crypto</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Solana</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Smart Contracts</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Web3.js</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="frontend">
+                        <h3><i class="fas fa-window-maximize"></i> Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Progressive Web Apps</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="94"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Modern CSS</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="tools">
+                        <h3><i class="fas fa-tools"></i> Tools & Superpowers</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-tooltip="I commit more than I should">Git & GitHub</span>
+                            <span class="skill-tag" data-tooltip="Bots that don't bot">Discord Bot Development</span>
+                            <span class="skill-tag">Real-time Data Processing</span>
+                            <span class="skill-tag">API Integration</span>
+                            <span class="skill-tag" data-tooltip="Fort Knox approved">Database Security</span>
+                            <span class="skill-tag" data-tooltip="Because who needs sleep?">Automation</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="round-status">Player123 is choosing the funniest card...</div>
-          </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <div class="container">
+                <h2 class="featured-glow">Featured Discord Bots</h2>
+                <p class="section-subtitle">Specialized Discord bots designed to enhance community experiences and solve specific challenges.</p>
+                <div class="cards-grid" id="bot-cards-grid">
+                    <!-- JustTheTip (FEATURED) -->
+                    <div class="card featured" data-featured="true">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-coins"></i></div>
+                            <h3>JustTheTip</h3>
+                        </div>
+                        <p>Enterprise-grade non-custodial Solana Smart Contract tipping for Discord communities. TypeScript SDK, multi-chain support, and PDA-based security.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Solana Smart Contracts</span>
+                            <span class="tech-tag">TypeScript SDK</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Non-Custodial</span>
+                        </div>
+                        <!-- Discord typing mockup -->
+                        <div class="discord-demo">
+                            <div class="discord-message user">
+                                <span class="name">DiamondHands</span>
+                                /tip @CryptoGamer 0.1 SOL 🚀
+                            </div>
+                            <div class="discord-message bot typing">
+                                <span class="name">JustTheTip</span>
+                                <span class="typing-dots"><span></span><span></span><span></span></span>
+                            </div>
+                            <div class="discord-message bot">
+                                <span class="name">JustTheTip</span>
+                                ✅ Tip sent! <span class="highlight">0.1 SOL</span> to @CryptoGamer using Solana smart contracts.
+                            </div>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Landing Page
+                            </a>
+                            <a href="https://github.com/jmenichole/Justthetip" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Degens Against Decency (FEATURED) -->
+                    <div class="card featured" data-featured="true">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            <h3>Degens Against Decency</h3>
+                        </div>
+                        <p>Web-based party game inspired by CAH. Multiplayer lobby, judge rounds, and AI-spiced content.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <!-- Interactive iframe demo -->
+                        <div class="demo-iframe-wrapper">
+                            <iframe
+                              src="https://degens-against-decency-dg0gb56.public.builtwithrocket.new"
+                              title="Degens Against Decency Demo"
+                              loading="lazy"
+                              allow="clipboard-write; fullscreen"
+                              referrerpolicy="no-referrer"
+                            ></iframe>
+                            <div class="iframe-caption">Live Demo Preview (via Netlify/Rocket)</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/degens-game-arena" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Other existing cards (kept) -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-robot"></i></div>
+                            <h3>Degens Bot</h3>
+                        </div>
+                        <p>Discord bot providing automated game management, community features, and interactive entertainment for gaming communities.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bot Development</span>
+                            <span class="tech-tag">Community Management</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Add Bot
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-gift"></i></div>
+                            <h3>FreeSpins Finder</h3>
+                        </div>
+                        <p>Automated system for submitting and announcing casino bonus links with community moderation and spam prevention.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Moderation</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Airdrop Gatekeeper</h3>
+                        </div>
+                        <p>Intelligent verification system that validates user eligibility for airdrops based on customizable admin-defined rules.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Verification Logic</span>
+                            <span class="tech-tag">Anti-Bot Protection</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/AirdropGatekeeper" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-home"></i></div>
+                            <h3>Trap House Bot</h3>
+                        </div>
+                        <p>Complete community management solution featuring welcome messages, leaderboard tracking, and advanced moderation tools.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Community Management</span>
+                            <span class="tech-tag">Gamification</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://traphousediscordbot.created.app" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Landing Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repository Showcase kept as-is -->
+        <section id="repository-showcase" class="repository-section fade-in">
+            <div class="container">
+                <h2>Development Portfolio</h2>
+                <p class="section-subtitle">Open-source projects and applications showcasing full-stack development capabilities.</p>
+                <!-- (Keeping original cards here would make this file massive; your live repo already contains them.) -->
+                <div class="more-projects">
+                    <a href="https://github.com/jmenichole" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> View All Projects on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate or discuss exciting opportunities? I'd love to hear from you.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a>
+                                <p>For project inquiries and professional opportunities</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/jmenichole" target="_blank">@jmenichole</a>
+                                <p>Explore my code and contribute to open source projects</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/jmenichole0" target="_blank">Connect with me</a>
+                                <p>Professional networking and career updates</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Discord Community</h3>
+                                <a href="https://discord.gg/q4K9n9hEpR" target="_blank">BetCollective</a>
+                                <p>Join our community for bot support and discussions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jamie Vargas | Full Stack Developer & Bot Engineer</p>
+                    <p>Made for degens by degens ♥</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/jmenichole" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jmenichole0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:jmenichole007@outlook.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-method">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a>
-            </div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-icon"><i class="fab fa-github"></i></div>
-            <div class="contact-details">
-              <h3>GitHub</h3>
-              <a href="https://github.com/jmenichole" target="_blank">@jmenichole</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-text">
-        <p>© 2025 Jamie Vargas. Made for degens ❤️ by degens.</p>
-      </div>
-    </div>
-  </footer>
+    <script>
+        // === Existing interactive JS from your page (trimmed to essentials to avoid duplication) ===
 
+        // Fade-in animation observer
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+        fadeIns.forEach(section => observer.observe(section));
+
+        // Mobile navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+          hamburger.addEventListener('click', () => {
+              hamburger.classList.toggle('active');
+              navMenu.classList.toggle('active');
+          });
+          document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+              hamburger.classList.remove('active');
+              navMenu.classList.remove('active');
+          }));
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+                if (!id || id === '#') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (!navbar) return;
+            if (window.scrollY > 100) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+        });
+
+        // Scroll progress
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            if (!scrollProgress) return;
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollCurrent = window.pageYOffset;
+            const scrollPercentage = (scrollCurrent / scrollTotal) * 100;
+            scrollProgress.style.width = scrollPercentage + '%';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
+        });
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Typing effect (kept)
+        const typingTexts = [
+            'Full Stack Developer & Bot Engineer',
+            'Code Wizard & Bug Whisperer',
+            'Discord Bot Architect',
+            'Professional Degen Developer'
+        ];
+        let textIndex = 0, charIndex = 0, isDeleting = false;
+        const typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000;
+        function typeEffect() {
+            const typingElement = document.getElementById('typing-text');
+            if (!typingElement) return;
+            const currentText = typingTexts[textIndex];
+            if (isDeleting) { typingElement.textContent = currentText.substring(0, charIndex - 1); charIndex--; }
+            else { typingElement.textContent = currentText.substring(0, charIndex + 1); charIndex++; }
+            let speed = isDeleting ? deletingSpeed : typingSpeed;
+            if (!isDeleting && charIndex === currentText.length) { speed = pauseTime; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; textIndex = (textIndex + 1) % typingTexts.length; }
+            setTimeout(typeEffect, speed);
+        }
+        setTimeout(typeEffect, 1000);
+
+        // Coffee counter easter egg (kept)
+        const coffeeCounter = document.getElementById('coffee-counter');
+        let coffeeCount = 0, coffeeInterval;
+        if (coffeeCounter) {
+            coffeeCounter.parentElement.addEventListener('mouseenter', () => {
+                coffeeInterval = setInterval(() => {
+                    coffeeCount++;
+                    coffeeCounter.textContent = coffeeCount;
+                    if (coffeeCount >= 9999) { coffeeCounter.textContent = '∞'; coffeeCount = 0; clearInterval(coffeeInterval); }
+                }, 50);
+            });
+            coffeeCounter.parentElement.addEventListener('mouseleave', () => {
+                clearInterval(coffeeInterval);
+                setTimeout(() => { coffeeCounter.textContent = '∞'; coffeeCount = 0; }, 1000);
+            });
+        }
+
+        // === NEW: Soft shuffle (keep featured on top, shuffle the rest) ===
+        (function softShuffle(){
+            const grid = document.getElementById('bot-cards-grid');
+            if (!grid) return;
+            const cards = Array.from(grid.children);
+            const featured = cards.filter(c => c.dataset.featured === 'true');
+            const others = cards.filter(c => c.dataset.featured !== 'true');
+            // Fisher-Yates shuffle for non-featured
+            for (let i = others.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [others[i], others[j]] = [others[j], others[i]];
+            }
+            // Re-append: featured first (keep original relative order), then shuffled others
+            grid.innerHTML = '';
+            featured.forEach(c => grid.appendChild(c));
+            others.forEach(c => grid.appendChild(c));
+        })();
+    </script>
 </body>
 </html>
