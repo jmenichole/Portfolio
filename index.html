@@ -1,252 +1,1241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jamie Vargas | Full Stack Developer & Bot Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamie Vargas - Full Stack Developer & Bot Engineer</title>
+    <meta name="description" content="Professional portfolio of Jamie Vargas - Full Stack Developer specializing in Discord bots, web applications, and automation solutions.">
+    <meta name="keywords" content="Full Stack Developer, Discord Bots, JavaScript, Python, Web Development, Automation, Portfolio">
+    <meta name="author" content="Jamie Vargas">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo"><span class="logo-text">Jme</span></a>
-      <ul class="nav-menu">
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="greeting">👋 Hey, I'm</span>
-          <h1 class="name">Jamie Vargas<span class="cursor-blink">|</span></h1>
-          <h2 class="hero-subtitle">Full Stack Developer & Bot Engineer</h2>
-          <p class="hero-description">
-            I design and build Discord bots, web applications, and blockchain tools that empower online communities and solve real-world challenges.
-          </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
-            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Contact</a>
-          </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JV</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#repository-showcase" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Projects -->
-  <section id="projects" class="fade-in">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <p class="section-subtitle">Discord bots, web apps, and tools built for fun and impact.</p>
-      <div class="cards-grid">
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="name">Jamie Vargas</span>
+                    </h1>
+                    <h2 class="hero-subtitle"><span id="typing-text">Full Stack Developer & Bot Engineer</span><span class="cursor-blink">|</span></h2>
+                    <p class="hero-description">
+                        Passionate developer specializing in Discord bot development, web applications, and automation solutions. 
+                        I create innovative tools that solve real-world problems and enhance user experiences.
+                        <span class="easter-egg" title="Plot twist: The bugs fix themselves when I stare at them long enough 🐛">*</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#repository-showcase" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Jamie Vargas'</span>,
+  <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'Python'</span>, <span class="string">'Node.js'</span>],
+  <span class="property">passion</span>: <span class="string">'Building innovative solutions'</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-section fade-in">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">I'm a dedicated full-stack developer with a passion for creating innovative solutions that make a difference.</p>
+                        <p>With extensive experience in Discord bot development, web applications, and automation tools, I specialize in building scalable and user-friendly applications. My work spans from community management bots to mental health protection apps, always focusing on solving real-world problems through technology.</p>
+                        <p>I believe in continuous learning and staying current with the latest technologies. Whether it's developing complex Discord ecosystems or creating progressive web applications, I approach each project with enthusiasm and attention to detail.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">GitHub Repositories</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Active Discord Bots</div>
+                        </div>
+                        <div class="stat" data-tooltip="Fueled by caffeine & code">
+                            <div class="stat-number" id="coffee-counter">∞</div>
+                            <div class="stat-label">Coffee Consumed</div>
+                            <div class="stat-subtext">☕ (and counting...)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements-section fade-in">
+            <div class="container">
+                <h2>Professional Achievements</h2>
+                <p class="section-subtitle">Recognition and accomplishments that demonstrate expertise and impact</p>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Open Source Contributor</h3>
+                            <p>Active contributor to multiple open-source projects with 20+ public repositories and growing community engagement.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">20+ Repos</span>
+                                <span class="stat-badge">Community Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Innovation in Discord Ecosystems</h3>
+                            <p>Pioneered enterprise-grade non-custodial solutions and advanced bot architectures for community management.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">8+ Active Bots</span>
+                                <span class="stat-badge">Enterprise-Grade</span>
+                            </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Full-Stack Architecture</h3>
+                            <p>Demonstrated expertise across blockchain integration, real-time systems, and progressive web applications.</p>
+                            <div class="achievement-stats">
+                                <span class="stat-badge">Multi-Chain</span>
+                                <span class="stat-badge">Real-Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section fade-in">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <p class="section-subtitle">Stack so full, it occasionally overflows <span class="easter-egg" title="Get it? Stack overflow? 😏">😉</span></p>
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="languages">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="backend">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="93"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Discord.js</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="96"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">RESTful APIs</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="blockchain">
+                        <h3><i class="fas fa-cube"></i> Blockchain & Crypto</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Solana</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Smart Contracts</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Web3.js</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="frontend">
+                        <h3><i class="fas fa-window-maximize"></i> Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Progressive Web Apps</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="94"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Modern CSS</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-category="tools">
+                        <h3><i class="fas fa-tools"></i> Tools & Superpowers</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-tooltip="I commit more than I should">Git & GitHub</span>
+                            <span class="skill-tag" data-tooltip="Bots that don't bot">Discord Bot Development</span>
+                            <span class="skill-tag">Real-time Data Processing</span>
+                            <span class="skill-tag">API Integration</span>
+                            <span class="skill-tag" data-tooltip="Fort Knox approved">Database Security</span>
+                            <span class="skill-tag" data-tooltip="Because who needs sleep?">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <div class="container">
+                <h2>Featured Discord Bots</h2>
+                <p class="section-subtitle">Specialized Discord bots designed to enhance community experiences and solve specific challenges.</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-robot"></i></div>
+                            <h3>Degens Bot</h3>
+                        </div>
+                        <p>Discord bot providing automated game management, community features, and interactive entertainment for gaming communities.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bot Development</span>
+                            <span class="tech-tag">Community Management</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Add Bot
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            <h3>Game Arena</h3>
+                        </div>
+                        <p>Full-scale game arena site featuring Cards Against Humanity-style gameplay, tournament hosting, and comprehensive leaderboard system for competitive gaming communities.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">Tournament System</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/degens-game-arena" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-gift"></i></div>
+                            <h3>FreeSpins Finder</h3>
+                        </div>
+                        <p>Automated system for submitting and announcing casino bonus links with community moderation and spam prevention.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Moderation</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-coins"></i></div>
+                            <h3>JustTheTip</h3>
+                        </div>
+                        <p>Enterprise-grade non-custodial Solana Smart Contract SDK for Discord communities. Features TypeScript SDK, multi-chain support (SOL, USDC, LTC), and advanced Program Derived Address implementation.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Solana Smart Contracts</span>
+                            <span class="tech-tag">TypeScript SDK</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Non-Custodial</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://tiltcheckecosystem.created.app/justthetip" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Landing Page
+                            </a>
+                            <a href="https://github.com/jmenichole/Justthetip" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Airdrop Gatekeeper</h3>
+                        </div>
+                        <p>Intelligent verification system that validates user eligibility for airdrops based on customizable admin-defined rules.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Verification Logic</span>
+                            <span class="tech-tag">Anti-Bot Protection</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/AirdropGatekeeper" target="_blank" class="btn-card">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-home"></i></div>
+                            <h3>Trap House Bot</h3>
+                        </div>
+                        <p>Complete community management solution featuring welcome messages, leaderboard tracking, and advanced moderation tools.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Community Management</span>
+                            <span class="tech-tag">Gamification</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://traphousediscordbot.created.app" target="_blank" class="btn-card">
+                                <i class="fas fa-external-link-alt"></i> Landing Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="repository-showcase" class="repository-section fade-in">
+            <div class="container">
+                <h2>Development Portfolio</h2>
+                <p class="section-subtitle">Open-source projects and applications showcasing full-stack development capabilities.</p>
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/CollectClock" target="_blank">CollectClock</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 2</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Streamlined bonus collection system with efficient timing for multiple casino collections. Features responsive design and social casino integration.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag html">HTML5</span>
+                            <span class="tech-tag css">CSS3</span>
+                            <span class="tech-tag js">JavaScript</span>
+                        </div>
+                        <div class="repo-topics">
+                            <span class="topic">gambling</span>
+                            <span class="topic">timers</span>
+                            <span class="topic">social-casino</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://jmenichole.github.io/CollectClock/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/CollectClock" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/porter-plays-leaderboard" target="_blank">Porter Plays Leaderboard</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Modern real-time wager leaderboard platform with live tracking, admin dashboard, and multi-casino integration. Features biweekly/monthly competitions, VIP transfer programs, and responsive design with dark neon theme.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Real-time Data</span>
+                            <span class="tech-tag">Admin Dashboard</span>
+                        </div>
+                        <div class="repo-topics">
+                            <span class="topic">leaderboards</span>
+                            <span class="topic">gaming</span>
+                            <span class="topic">community</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://jmenichole.github.io/porter-plays-leaderboard/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/porter-plays-leaderboard" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/TiltCheck-Ecosystem" target="_blank">TiltCheck Ecosystem</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Comprehensive Discord bot ecosystem featuring welcome messages, leaderboard tracking, and advanced moderation capabilities.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag js">JavaScript</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Database</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://tiltcheckecosystem.created.app" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Developer Portal
+                            </a>
+                            <a href="https://github.com/jmenichole/TiltCheck-Ecosystem" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/LinkGaurd" target="_blank">LinkGuard</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Discord security bot that verifies link safety by scanning URLs against known safe and unsafe domains, providing real-time protection.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">URL Scanning</span>
+                            <span class="tech-tag">Discord Bot</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://github.com/jmenichole/LinkGaurd" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/Maker-Estimater" target="_blank">Maker Estimator</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Progressive Web App designed to help craft makers calculate accurate price quotes for vinyl projects with material cost estimation.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag html">HTML5</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Business Tools</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://github.com/jmenichole/Maker-Estimater" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/Rock-Spotter-App" target="_blank">Rock Spotter App</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Social platform for rock enthusiasts to upload geological finds, participate in identification discussions, and connect with fellow collectors.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag js">JavaScript</span>
+                            <span class="tech-tag">Social Platform</span>
+                            <span class="tech-tag">Image Upload</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://github.com/jmenichole/Rock-Spotter-App" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/stake-engine-submission" target="_blank">Stake Engine Submission</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Advanced betting engine submission system with automated validation, strategy analysis, and performance tracking for competitive gambling platforms.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <div class="repo-topics">
+                            <span class="topic">betting-engine</span>
+                            <span class="topic">automation</span>
+                            <span class="topic">analytics</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://github.com/jmenichole/stake-engine-submission" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/tarot-of-fate" target="_blank">Tarot of Fate</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Interactive tarot card reading game with mystical animations, personalized interpretations, and community sharing features for divination enthusiasts.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS Animations</span>
+                            <span class="tech-tag">Interactive Game</span>
+                        </div>
+                        <div class="repo-topics">
+                            <span class="topic">tarot</span>
+                            <span class="topic">divination</span>
+                            <span class="topic">interactive</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://jmenichole.github.io/tarot-of-fate/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/tarot-of-fate" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/TiltCheck" target="_blank">TiltCheck</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>TiltCheck is designed to help identify, track, and mitigate player tilt behaviors. The system analyzes betting patterns, time spent at tables, and emotional indicators to provide real-time alerts.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag js">JavaScript</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Real-time Monitoring</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://tiltcheck.it.com/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/TiltCheck" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/DegensAgainstDecency" target="_blank">Degens Against Decency</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>An outrageous web-based card game arena for group play, inspired by games like Cards Against Humanity. The game content is dynamically generated by AI for endless fun.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag js">JavaScript</span>
+                            <span class="tech-tag">AI Content</span>
+                            <span class="tech-tag">Multiplayer</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://jmenichole.github.io/DegensAgainstDecency/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/DegensAgainstDecency" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/Brand-Aura" target="_blank">Brand Aura</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>AI-powered brand generator that helps create unique brand identities, logos, and marketing materials using advanced machine learning algorithms.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Brand Generation</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://github.com/jmenichole/Brand-Aura" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/qualifyfirst" target="_blank">QualifyFirst</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>TypeScript application for streamlining qualification processes with modern tools and efficient workflow management.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Business Tools</span>
+                            <span class="tech-tag">Workflow</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://qualifyfirst.vercel.app" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/qualifyfirst" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <h3>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/jmenichole/Template-Craft" target="_blank">Template Craft</a>
+                            </h3>
+                            <div class="repo-stats">
+                                <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                            </div>
+                        </div>
+                        <p>Versatile template creation and management tool for building customizable templates and design systems.</p>
+                        <div class="repo-tech">
+                            <span class="tech-tag js">JavaScript</span>
+                            <span class="tech-tag">Templates</span>
+                            <span class="tech-tag">Design System</span>
+                        </div>
+                        <div class="repo-links">
+                            <a href="https://jmenichole.github.io/Template-Craft/" target="_blank" class="btn-repo live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/jmenichole/Template-Craft" target="_blank" class="btn-repo">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="more-projects">
+                    <a href="https://github.com/jmenichole" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> View All Projects on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="coming-soon" class="fade-in">
+            <div class="container">
+                <h2>What's Next?</h2>
+                <p class="section-subtitle">Exciting projects currently in development and planning stages.</p>
+                <div class="coming-soon-grid">
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>TiltCheck Analytics</h3>
+                        <p>Advanced analytics platform for tracking user behavior and performance metrics in Discord communities.</p>
+                        <div class="coming-soon-tech">
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Visualization</span>
+                        </div>
+                    </div>
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Discord Companion</h3>
+                        <p>Cross-platform mobile application for enhanced Discord server management and moderation on the go.</p>
+                        <div class="coming-soon-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Mobile Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate or discuss exciting opportunities? I'd love to hear from you.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a>
+                                <p>For project inquiries and professional opportunities</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/jmenichole" target="_blank">@jmenichole</a>
+                                <p>Explore my code and contribute to open source projects</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/jmenichole0" target="_blank">Connect with me</a>
+                                <p>Professional networking and career updates</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Support My Work</h3>
+                                <a href="https://github.com/sponsors/jmenichole/dashboard" target="_blank">GitHub Sponsors</a>
+                                <p>Help support open source development</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Discord Community</h3>
+                                <a href="https://discord.gg/q4K9n9hEpR" target="_blank">BetCollective</a>
+                                <p>Join our community for bot support and discussions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jamie Vargas | Full Stack Developer & Bot Engineer</p>
+                    <p>Made for degens by degens ♥</p>
+                </div>
+                <div class="footer-links">
+                   
+  
+
+                    <a href="https://github.com/jmenichole" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jmenichole0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:jmenichole007@outlook.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <script>
+        // Fade-in animation observer
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        fadeIns.forEach(section => observer.observe(section));
+
+        // Mobile navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollCurrent = window.pageYOffset;
+            const scrollPercentage = (scrollCurrent / scrollTotal) * 100;
+            scrollProgress.style.width = scrollPercentage + '%';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
         
-        <!-- Degens Bot -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon"><i class="fas fa-robot"></i></div>
-            <h3>Degens Bot</h3>
-          </div>
-          <p>Discord bot providing automated game management, community features, and interactive entertainment for gaming communities.</p>
-          <div class="card-tech">
-            <span class="tech-tag">Discord.js</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Bot Development</span>
-          </div>
-          <div class="card-links">
-            <a href="https://discord.com/discovery/applications/1376113587025739807" target="_blank" class="btn-card">
-              <i class="fas fa-external-link-alt"></i> Add Bot
-            </a>
-          </div>
-        </div>
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-        <!-- Game Arena -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
-            <h3>Degen's Game Arena</h3>
-          </div>
-          <p>Cards Against Humanity-style game platform with multiplayer support, tournament hosting, and leaderboards.</p>
-          <div class="card-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">WebSocket</span>
-          </div>
-          <div class="card-links">
-            <a href="https://degens-against-decency-dg0gb56.public.builtwithrocket.new" target="_blank" class="btn-card">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
+        // Enhanced scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-        <!-- Rock Spotter -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon"><i class="fas fa-gem"></i></div>
-            <h3>Rock Spotter</h3>
-          </div>
-          <p>Mobile-friendly app for geology fans to share rock finds, join hunts, and learn about geology in fun interactive ways.</p>
-          <div class="card-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Vercel</span>
-            <span class="tech-tag">Geolocation</span>
-          </div>
-          <div class="card-links">
-            <a href="https://jmenichole.github.io/Rock-Spotter/" target="_blank" class="btn-card">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-            <a href="https://github.com/jmenichole/Rock-Spotter-App" target="_blank" class="btn-card">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
-        </div>
+        const enhancedObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.style.animationFillMode = 'forwards';
+                }
+            });
+        }, observerOptions);
 
-      </div>
-    </div>
-  </section>
+        // Observe skill categories for staggered animations
+        document.querySelectorAll('.skill-category').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+            enhancedObserver.observe(el);
+        });
 
-  <!-- Skills -->
-  <section id="skills" class="skills-section">
-    <div class="container">
-      <h2>Skills</h2>
-      <p class="section-subtitle">Technologies I use regularly</p>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Frontend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-server"></i> Backend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">MongoDB</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-robot"></i> Bots & Blockchain</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Discord.js</span>
-            <span class="skill-tag">Solana</span>
-            <span class="skill-tag">Web3.js</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        // Observe cards for staggered animations
+        document.querySelectorAll('.card, .achievement-card').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+            enhancedObserver.observe(el);
+        });
 
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p class="section-subtitle">Passionate about tech, community, and building solutions</p>
-      <div class="about-content">
-        <div class="about-text">
-          <p class="lead">Hi, I'm Jamie!</p>
-          <p>I’m a full stack developer and bot engineer with a love for creating interactive tools. Whether it’s automating Discord communities, building fun game arenas, or experimenting with blockchain, I thrive at the intersection of code and creativity.</p>
-          <p class="easter-egg">☕ Coffee consumed this week: too much.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        // ===== ENHANCED INTERACTIVE FEATURES =====
+        
+        // Dynamic typing effect for hero subtitle
+        const typingTexts = [
+            'Full Stack Developer & Bot Engineer',
+            'Code Wizard & Bug Whisperer',
+            'Caffeinated Code Composer',
+            'Discord Bot Architect',
+            'Professional Degen Developer'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p class="section-subtitle">Let’s collaborate or just say hi 👋</p>
-      <div class="contact-info">
-        <div class="contact-method">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-details">
-            <h3>Email</h3>
-            <a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a>
-          </div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-icon"><i class="fab fa-github"></i></div>
-          <div class="contact-details">
-            <h3>GitHub</h3>
-            <a href="https://github.com/jmenichole" target="_blank">github.com/jmenichole</a>
-          </div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-          <div class="contact-details">
-            <h3>LinkedIn</h3>
-            <a href="https://linkedin.com/in/jmenichole0" target="_blank">linkedin.com/in/jmenichole0</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        function typeEffect() {
+            const typingElement = document.getElementById('typing-text');
+            if (!typingElement) return;
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-text">
-        <p>© 2025 Jamie Vargas. Made for degens ❤️ by degens.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/jmenichole"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/jmenichole0"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:jmenichole007@outlook.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-  </footer>
+            const currentText = typingTexts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
-  <button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+            let speed = isDeleting ? deletingSpeed : typingSpeed;
 
-  <script>
-    // Navbar toggle
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    });
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+            }
 
-    // Scroll progress
-    const scrollProgress = document.getElementById("scrollProgress");
-    window.addEventListener("scroll", () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / height) * 100;
-      scrollProgress.style.width = scrolled + "%";
-    });
+            setTimeout(typeEffect, speed);
+        }
 
-    // Scroll top
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollTopBtn.classList.add("visible");
-      } else {
-        scrollTopBtn.classList.remove("visible");
-      }
-    });
-    scrollTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+        // Start typing effect after initial page load
+        setTimeout(typeEffect, 1000);
+
+        // Animated skill bars
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            const progress = bar.getAttribute('data-progress');
+                            bar.style.width = progress + '%';
+                        }, index * 100);
+                    });
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.skill-category').forEach(category => {
+            skillObserver.observe(category);
+        });
+
+        // 3D Tilt effect for cards
+        document.querySelectorAll('.card, .repo-card, .achievement-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Coffee counter easter egg - animates on hover
+        const coffeeCounter = document.getElementById('coffee-counter');
+        let coffeeCount = 0;
+        let coffeeInterval;
+        
+        if (coffeeCounter) {
+            coffeeCounter.parentElement.addEventListener('mouseenter', () => {
+                coffeeInterval = setInterval(() => {
+                    coffeeCount++;
+                    coffeeCounter.textContent = coffeeCount;
+                    if (coffeeCount >= 9999) {
+                        coffeeCounter.textContent = '∞';
+                        coffeeCount = 0;
+                        clearInterval(coffeeInterval);
+                    }
+                }, 50);
+            });
+            
+            coffeeCounter.parentElement.addEventListener('mouseleave', () => {
+                clearInterval(coffeeInterval);
+                setTimeout(() => {
+                    coffeeCounter.textContent = '∞';
+                    coffeeCount = 0;
+                }, 1000);
+            });
+        }
+
+        // Interactive code preview - highlights on hover
+        const codePreview = document.querySelector('.code-preview');
+        if (codePreview) {
+            codePreview.addEventListener('mouseenter', () => {
+                codePreview.style.transform = 'scale(1.02)';
+            });
+            
+            codePreview.addEventListener('mouseleave', () => {
+                codePreview.style.transform = 'scale(1)';
+            });
+        }
+
+        // Enhanced tooltip system
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseenter', (e) => {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'custom-tooltip';
+                tooltip.textContent = e.target.getAttribute('data-tooltip');
+                document.body.appendChild(tooltip);
+                
+                const rect = e.target.getBoundingClientRect();
+                tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+                
+                setTimeout(() => tooltip.classList.add('show'), 10);
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                const tooltip = document.querySelector('.custom-tooltip');
+                if (tooltip) {
+                    tooltip.classList.remove('show');
+                    setTimeout(() => tooltip.remove(), 300);
+                }
+            });
+        });
+
+        // Particle cursor trail effect
+        const particles = [];
+        const maxParticles = 20;
+        
+        document.addEventListener('mousemove', (e) => {
+            if (particles.length < maxParticles) {
+                const particle = document.createElement('div');
+                particle.className = 'cursor-particle';
+                particle.style.left = e.pageX + 'px';
+                particle.style.top = e.pageY + 'px';
+                document.body.appendChild(particle);
+                particles.push(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                    particles.shift();
+                }, 1000);
+            }
+        });
+
+        // Konami code easter egg
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                document.body.style.animation = 'rainbow 2s ease-in-out';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                    alert('🎉 Achievement Unlocked: You found the secret! You\'re clearly a person of culture. 🎮');
+                }, 2000);
+            }
+        });
+
+        // Smooth reveal for repo cards on scroll
+        const repoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 50);
+                    repoObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.repo-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            repoObserver.observe(card);
+        });
+    </script>
 </body>
 </html>
