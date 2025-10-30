@@ -496,8 +496,6 @@ html {
     transform: translateY(-2px);
     box-shadow: 0 6px 24px rgba(99, 102, 241, 0.15);
 }
-    text-align: center;
-}
 
 /* Code Preview */
 .code-preview {
@@ -1840,10 +1838,6 @@ html {
 .skill-tag {
     position: relative;
     cursor: pointer;
-}
-
-.skill-tag:hover {
-    transform: translateY(-2px);
 }
 
 /* Mobile optimizations for new features */
