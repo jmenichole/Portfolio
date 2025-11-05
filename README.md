@@ -23,20 +23,24 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 ## 📦 Projects Featured
 
 ### Discord Bots & Applications
-- **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK with TypeScript SDK and multi-chain support
-- **TiltCheck Ecosystem** - Comprehensive betting analysis platform
-- **Mischief Manager** - Mental health protection application
-- **Rock Spotter App** - Social platform for geological finds
+- **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK with Rust smart contracts, TypeScript SDK and multi-chain support ($5K Superteam Grant Winner)
+- **TiltCheck Ecosystem** - Comprehensive betting analysis and responsible gambling platform
+- **Mischief Manager** - Mental health protection application for ad blocking
+- **Rock Spotter App** - Social platform for geological finds and rock hunting
 - **Trap House Bot** - Complete community management solution
-- **Airdrop Gatekeeper** - Intelligent verification system
-- **Degen's Game Arena** - Full-scale game arena site with tournament system
+- **Airdrop Gatekeeper** - Intelligent verification system with anti-bot protection
+- **FreeSpins Finder** - Automated system for casino bonus link management
+- **Degen's Game Arena** - Full-scale game arena site with Cards Against Humanity-style gameplay and tournament system
 
 ### Web Applications
-- **CollectClock** - Time management and productivity tool with live demo available
-- **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK for Discord communities with TypeScript SDK and multi-chain support
-- **Porter Plays Leaderboard** - Modern real-time wager leaderboard platform with admin dashboard, multi-casino integration, and VIP transfer programs
-- **Stake Engine Submission** - Advanced betting engine with automated validation and analytics
-- **Tarot of Fate** - Interactive tarot card reading game with mystical animations
+- **CollectClock** - Smart bonus collection timer system for social casinos (2 stars)
+- **QualifyFirst** - Modern TypeScript application for qualification and lead management processes
+- **Porter Plays Leaderboard** - Modern real-time wager leaderboard platform with admin dashboard, multi-casino integration, and VIP programs
+- **Stake Engine Guidelines Checker** - TypeScript tool for validating game submissions against platform guidelines
+- **Maker Estimator** - Progressive Web App for craft makers to calculate vinyl project quotes
+- **Template Craft** - Versatile template creation and management tool for web templates
+- **Brand Aura** - AI-powered brand generator using machine learning algorithms
+- **Degens Against Decency** - Web-based multiplayer card game with AI-generated content
 
 ## 🚀 Deployment
 
