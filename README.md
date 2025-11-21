@@ -24,7 +24,8 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 
 ### Discord Bots & Applications
 - **JustTheTip** - Enterprise-grade non-custodial Solana Smart Contract SDK with Rust smart contracts, TypeScript SDK and multi-chain support ($5K Superteam Grant Winner)
-- **TiltCheck Ecosystem** - Comprehensive betting analysis and responsible gambling platform
+- **TiltCheck Monorepo** - Modular Discord-first safety and utility ecosystem for fixing online degen communities
+- **TiltCheck** - Comprehensive betting analysis and responsible gambling platform
 - **Mischief Manager** - Mental health protection application for ad blocking
 - **Rock Spotter App** - Social platform for geological finds and rock hunting
 - **Trap House Bot** - Complete community management solution
@@ -41,6 +42,12 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 - **Template Craft** - Versatile template creation and management tool for web templates
 - **Brand Aura** - AI-powered brand generator using machine learning algorithms
 - **Degens Against Decency** - Web-based multiplayer card game with AI-generated content
+
+### Developer Tools & Automation
+- **Portfolio Necromancer** - Auto-generates portfolios from scattered work files and documentation
+- **Scope Creep** - Freelance agreement enforcement tool with anti-scope-creep protection
+- **Rate My Client** - Anonymous platform for freelancers to share client experiences and flag red flags
+- **DisposableVM** - Disposable virtual machine manager for secure development environments
 
 ## 🚀 Deployment
 
