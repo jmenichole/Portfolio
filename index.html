@@ -1124,6 +1124,34 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open chat">
+            <i class="fas fa-comment-dots"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chatbot-header-info">
+                    <h4>TiltCheck Assistant</h4>
+                    <span>Online</span>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off">
+                <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll to Top Button -->
     <button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top">
         <i class="fas fa-chevron-up"></i>
@@ -1424,6 +1452,171 @@
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             repoObserver.observe(card);
+        });
+
+        // ===== AI CHATBOT =====
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+
+        // Chatbot knowledge base
+        const chatbotKnowledge = {
+            greeting: "Hey! 👋 I'm the TiltCheck Assistant. I can help you with:\n\n• Getting a project quote\n• Learning about my services\n• Exploring my projects\n• Answering FAQs\n\nWhat would you like to know?",
+            services: "I specialize in:\n\n🤖 **Discord Bot Development** - Custom bots for communities\n🌐 **Full-Stack Web Apps** - React, Node.js, TypeScript\n⛓️ **Blockchain/Web3** - Solana smart contracts, non-custodial systems\n🔒 **Security Tools** - Scam detection, trust engines\n\nWant a quote for your project?",
+            quote: "I'd love to help with your project! 📝\n\nTo give you an accurate quote, please share:\n\n1. **Project type** (bot, web app, tool)\n2. **Brief description** of what you need\n3. **Timeline** expectations\n4. **Budget range** (if known)\n\nOr email me directly at **jmenichole007@outlook.com** for a detailed discussion!",
+            projects: "Here are some of my featured projects:\n\n🎯 **TiltCheck Ecosystem** - AI-assisted safety platform for gambling communities\n💰 **JustTheTip** - Non-custodial Solana tipping ($5K grant winner!)\n⏰ **CollectClock** - Bonus collection timer\n🎮 **Degens Against Decency** - Multiplayer card game\n\n[View all projects](#repository-showcase)",
+            tiltcheck: "**TiltCheck** is my flagship project! 🚀\n\nIt's a modular ecosystem with 10+ tools:\n• SusLink - Scam detection\n• CollectClock - Bonus tracking\n• FreeSpinScan - Promo validation\n• Trust Engines - Casino/User scoring\n\nBuilt with TypeScript, Discord.js, Supabase, and Cloudflare Workers.\n\n[Learn more](https://tiltcheck.me)",
+            contact: "You can reach me through:\n\n📧 **Email**: jmenichole007@outlook.com\n💼 **LinkedIn**: [jmenichole0](https://linkedin.com/in/jmenichole0)\n🐙 **GitHub**: [jmenichole](https://github.com/jmenichole)\n💬 **Discord**: [BetCollective](https://discord.gg/q4K9n9hEpR)\n\nI typically respond within 24 hours!",
+            pricing: "Pricing depends on project complexity:\n\n💡 **Simple Discord Bot**: $500-1,500\n🌐 **Web Application**: $2,000-10,000\n⛓️ **Blockchain Integration**: $3,000-15,000\n🔧 **Custom Tool/Automation**: $1,000-5,000\n\nThese are estimates - reach out for a personalized quote!",
+            tech: "My tech stack includes:\n\n**Languages**: TypeScript, JavaScript, Python, Rust\n**Frontend**: React, HTML5, CSS3, PWAs\n**Backend**: Node.js, Discord.js, Express\n**Databases**: Supabase, MongoDB, SQLite\n**Cloud**: Cloudflare Workers, Vercel\n**Blockchain**: Solana, Web3.js\n\nI'm always learning new technologies!",
+            hire: "Excited to work together! 🎉\n\nTo get started:\n1. **Email me** at jmenichole007@outlook.com\n2. Share your project idea\n3. I'll respond with questions and timeline\n4. We'll agree on scope and pricing\n\nOr book a quick call through LinkedIn!"
+        };
+
+        // Quick action buttons
+        const quickActions = [
+            { text: "💰 Get a Quote", query: "quote" },
+            { text: "🛠️ Services", query: "services" },
+            { text: "📂 Projects", query: "projects" },
+            { text: "📞 Contact", query: "contact" }
+        ];
+
+        // Initialize chatbot
+        function initChatbot() {
+            addBotMessage(chatbotKnowledge.greeting, true);
+        }
+
+        // Add message to chat
+        function addBotMessage(text, withQuickActions = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chatbot-message bot';
+            messageDiv.innerHTML = formatMessage(text);
+            chatbotMessages.appendChild(messageDiv);
+            
+            if (withQuickActions) {
+                const actionsDiv = document.createElement('div');
+                actionsDiv.className = 'quick-actions';
+                quickActions.forEach(action => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-action-btn';
+                    btn.textContent = action.text;
+                    btn.onclick = () => handleUserMessage(action.query);
+                    actionsDiv.appendChild(btn);
+                });
+                chatbotMessages.appendChild(actionsDiv);
+            }
+            
+            scrollToBottom();
+        }
+
+        function addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chatbot-message user';
+            messageDiv.textContent = text;
+            chatbotMessages.appendChild(messageDiv);
+            scrollToBottom();
+        }
+
+        function showTypingIndicator() {
+            const indicator = document.createElement('div');
+            indicator.className = 'typing-indicator';
+            indicator.id = 'typing-indicator';
+            indicator.innerHTML = '<span></span><span></span><span></span>';
+            chatbotMessages.appendChild(indicator);
+            scrollToBottom();
+        }
+
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) indicator.remove();
+        }
+
+        function scrollToBottom() {
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function formatMessage(text) {
+            return text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')
+                .replace(/\n/g, '<br>');
+        }
+
+        // Process user message
+        function handleUserMessage(input) {
+            const query = input.toLowerCase().trim();
+            
+            if (query) {
+                addUserMessage(input);
+                showTypingIndicator();
+                
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const response = generateResponse(query);
+                    addBotMessage(response);
+                }, 800 + Math.random() * 500);
+            }
+            
+            chatbotInput.value = '';
+        }
+
+        function generateResponse(query) {
+            // Check for keywords and return appropriate response
+            if (query.includes('quote') || query.includes('cost') || query.includes('price') || query.includes('estimate')) {
+                return chatbotKnowledge.quote;
+            }
+            if (query.includes('service') || query.includes('offer') || query.includes('do you do') || query.includes('what do you')) {
+                return chatbotKnowledge.services;
+            }
+            if (query.includes('project') || query.includes('portfolio') || query.includes('work') || query.includes('built')) {
+                return chatbotKnowledge.projects;
+            }
+            if (query.includes('tiltcheck') || query.includes('tilt check') || query.includes('flagship')) {
+                return chatbotKnowledge.tiltcheck;
+            }
+            if (query.includes('contact') || query.includes('email') || query.includes('reach') || query.includes('talk')) {
+                return chatbotKnowledge.contact;
+            }
+            if (query.includes('pricing') || query.includes('rate') || query.includes('how much')) {
+                return chatbotKnowledge.pricing;
+            }
+            if (query.includes('tech') || query.includes('stack') || query.includes('language') || query.includes('skill')) {
+                return chatbotKnowledge.tech;
+            }
+            if (query.includes('hire') || query.includes('work together') || query.includes('start') || query.includes('begin')) {
+                return chatbotKnowledge.hire;
+            }
+            if (query.includes('hello') || query.includes('hi') || query.includes('hey') || query.includes('help')) {
+                return chatbotKnowledge.greeting;
+            }
+            
+            // Default response
+            return "I'm not sure about that, but I can help with:\n\n• Project quotes and pricing\n• My services and skills\n• Project portfolio\n• Contact information\n\nTry asking about one of these, or email me at **jmenichole007@outlook.com** for specific questions!";
+        }
+
+        // Event listeners
+        chatbotToggle.addEventListener('click', () => {
+            chatbotToggle.classList.toggle('active');
+            chatbotWindow.classList.toggle('active');
+            
+            if (chatbotWindow.classList.contains('active') && chatbotMessages.children.length === 0) {
+                initChatbot();
+            }
+            
+            if (chatbotWindow.classList.contains('active')) {
+                chatbotInput.focus();
+            }
+        });
+
+        chatbotSend.addEventListener('click', () => {
+            handleUserMessage(chatbotInput.value);
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserMessage(chatbotInput.value);
+            }
         });
     </script>
 </body>
