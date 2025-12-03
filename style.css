@@ -114,10 +114,6 @@ body::after {
     100% {
         transform: translateY(-100px) rotate(360deg);
     }
-    overflow-x: hidden;
-    /* Mobile optimizations */
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
 /* Mobile touch optimizations */
