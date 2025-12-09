@@ -645,6 +645,57 @@ section h2::after {
     margin-right: auto;
 }
 
+/* Subsection Titles */
+.subsection-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 3rem 0 1rem 0;
+    text-align: center;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 4rem 0;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '⬥';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    padding: 0 1rem;
+    font-size: 0.8rem;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+}
+
+.badge-flagship {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.badge-grant {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
 /* About Section */
 .about-content {
     display: grid;
@@ -844,6 +895,12 @@ section h2::after {
     position: relative;
 }
 
+/* Projects Section */
+.projects-section {
+    background: var(--bg-primary);
+    position: relative;
+}
+
 .skills-section::before {
     content: '';
     position: absolute;
@@ -990,6 +1047,89 @@ section h2::after {
     flex-direction: column;
     position: relative;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured Project Cards */
+.featured-project {
+    border-color: rgba(20, 184, 166, 0.3);
+}
+
+.featured-project:hover {
+    border-color: rgba(20, 184, 166, 0.6);
+}
+
+/* Project Meta */
+.project-meta {
+    padding: 0 2rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.meta-item i {
+    color: var(--secondary-color);
+}
+
+/* Compact Grid for Other Projects */
+.compact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.compact-grid .repo-card {
+    padding: 1.5rem;
+}
+
+.compact-grid .repo-card h4 {
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem 0;
+    color: var(--text-primary);
+}
+
+.compact-grid .repo-card h4 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.compact-grid .repo-card h4 a:hover {
+    color: var(--secondary-color);
+}
+
+.compact-grid .repo-card > p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Button Variations */
+.btn-card-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-card-secondary:hover {
+    background: rgba(20, 184, 166, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
 }
 
 .card::before {
@@ -1358,6 +1498,46 @@ section h2::after {
     border-top: 1px solid var(--border-color);
 }
 
+/* Contact CTA */
+.contact-cta {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+}
+
+.cta-primary {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(0, 212, 170, 0.05));
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-xl);
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    animation: shimmerTop 3s ease-in-out infinite;
+}
+
+.cta-primary h3 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.cta-primary p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
 .contact-content {
     margin-top: 3rem;
 }
@@ -1413,6 +1593,13 @@ section h2::after {
 .contact-details h3 {
     color: var(--text-primary);
     font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
