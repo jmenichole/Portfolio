@@ -1132,19 +1132,6 @@ section h2::after {
     font-size: 1.1rem;
 }
 
-.card {
-    background: rgba(30, 30, 47, 0.7);
-    backdrop-filter: blur(15px);
-    border-radius: var(--border-radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    transition: var(--transition-slow);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
 .card::before {
     content: '';
     position: absolute;
