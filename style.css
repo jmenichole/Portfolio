@@ -146,16 +146,25 @@ main h2 {
     gap: 20px;
 }
 
+.project-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .project {
     background-color: var(--card-background);
     padding: 20px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: border-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%; /* Ensure cards in the same row are the same height */
 }
 
 .project:hover {
+    transform: scale(1.03);
     border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(0, 255, 198, 0.1);
+    cursor: pointer;
 }
 
 .project h3 {
@@ -166,6 +175,27 @@ main h2 {
 .project p {
     color: var(--muted-foreground);
     font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.project-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: var(--border);
+    transition: background-color 0.2s;
+}
+
+.project-links a:hover {
+    background-color: var(--primary);
+    color: var(--background);
 }
 
 /* --- Footer --- */
