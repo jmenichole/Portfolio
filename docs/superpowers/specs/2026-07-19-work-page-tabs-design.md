@@ -149,7 +149,7 @@ No pill chips / badge grid.
 
 Replace the current footer tagline with:
 
-`made for degens by degens`
+`made for degens by degens · powered by coffee and code`
 
 Same tagline on `index.html` and `work.html`.
 
