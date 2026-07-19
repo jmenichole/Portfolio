@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="glitter-field" id="glitter-field" aria-hidden="true"></div>
 
     <nav class="nav" id="nav">
         <div class="nav-inner">
@@ -30,25 +29,20 @@
     </nav>
 
     <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-copy">
-                <p class="eyebrow">Web3 security · Full stack · Automation</p>
-                <h1>Jamie Vargas</h1>
-                <p class="hero-lead">
-                    I formalize attack patterns as executable queries, build Discord-first products,
-                    and ship automation that survives triage — not just demos.
-                </p>
-                <div class="hero-cta">
-                    <a href="#security" class="btn btn-primary">Security work</a>
-                    <a href="https://github.com/jmenichole" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/jmenichole0" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-            <div class="hero-card glitter-card">
-                <div class="hero-card-label">Latest</div>
-                <h2>#1 Glider Query Database</h2>
-                <p>Legendary + Epic query approvals — rarest contributor tier on the board to date.</p>
-                <a href="https://r.xyz/glider-query-database/leaderboard" class="text-link" target="_blank" rel="noopener">View leaderboard →</a>
+        <div class="hero-media" aria-hidden="true">
+            <img src="assets/hero.svg" alt="" width="1600" height="900">
+        </div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="container hero-copy">
+            <h1>Jamie Vargas</h1>
+            <p class="hero-proof">#1 Glider Query Database · Legendary + Epic</p>
+            <p class="hero-lead">
+                I formalize attack patterns as executable queries, build Discord-first products,
+                and ship automation that survives triage — not just demos.
+            </p>
+            <div class="hero-cta">
+                <a href="#security" class="btn btn-primary">Security work</a>
+                <a href="https://github.com/jmenichole" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
             </div>
         </div>
     </header>
@@ -57,39 +51,22 @@
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">About</h2>
-                <div class="about-grid">
-                    <div class="prose">
-                        <p class="lead">Problem-solving junkie. Tilt professional. Girl who codes.</p>
-                        <p>
-                            I'm a builder who moved from bots and community tooling into
-                            <strong>smart contract security research</strong> — same obsession with signal,
-                            fewer false positives, and tooling that scales across chains.
-                        </p>
-                        <p>
-                            I created <strong>TiltCheck</strong>, a modular safety ecosystem for online gambling
-                            communities, and won a <strong>$5K Superteam grant</strong> for JustTheTip, a non-custodial
-                            Solana tipping stack. Lately the focus is Glider, bug bounty methodology, and query
-                            optimization that passes professional triage.
-                        </p>
-                    </div>
-                    <div class="stat-grid">
-                        <div class="stat">
-                            <span class="stat-value">#1</span>
-                            <span class="stat-label">Glider leaderboard</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">2</span>
-                            <span class="stat-label">Legendary + Epic tiers</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">30+</span>
-                            <span class="stat-label">Open source repos</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">$5K</span>
-                            <span class="stat-label">Grant winner</span>
-                        </div>
-                    </div>
+                <div class="prose">
+                    <p class="lead">Problem-solving junkie. Tilt professional. Girl who codes.</p>
+                    <p>
+                        I'm a builder who moved from bots and community tooling into
+                        <strong>smart contract security research</strong> — same obsession with signal,
+                        fewer false positives, and tooling that scales across chains.
+                    </p>
+                    <p>
+                        I created <strong>TiltCheck</strong>, a modular safety ecosystem for online gambling
+                        communities, and won a <strong>$5K Superteam grant</strong> for JustTheTip, a non-custodial
+                        Solana tipping stack. Lately the focus is Glider, bug bounty methodology, and query
+                        optimization that passes professional triage.
+                    </p>
+                    <p class="proof-line">
+                        <span class="mono">#1</span> Glider leaderboard · Legendary + Epic approvals · $5K Superteam grant · 30+ repos
+                    </p>
                 </div>
             </div>
         </section>
@@ -103,11 +80,11 @@
                 </p>
 
                 <article class="feature-card">
-                    <div class="feature-card-top">
-                        <span class="badge badge-gold glitter-badge">Legendary</span>
-                        <span class="badge badge-purple">Epic</span>
-                        <span class="badge badge-muted">Optimization</span>
-                    </div>
+                    <p class="label-row">
+                        <span class="label label-proof">Legendary</span>
+                        <span class="label">Epic</span>
+                        <span class="label">Optimization</span>
+                    </p>
                     <h3>Glider Query Database · r.xyz</h3>
                     <p>
                         Ranked <strong>#1 on the leaderboard</strong> with the rarest contributor tier achieved to date.
@@ -119,20 +96,11 @@
                         <li>Case-study validation, false-positive tradeoffs documented for production triage</li>
                     </ul>
                     <div class="card-links">
-                        <a href="https://r.xyz/glider-query-database" class="btn btn-sm" target="_blank" rel="noopener">Query database</a>
-                        <a href="https://r.xyz/glider-query-database/leaderboard" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">Leaderboard</a>
-                        <a href="https://github.com/jmenichole/jmenichole" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">Profile README</a>
+                        <a href="https://r.xyz/glider-query-database" class="text-link" target="_blank" rel="noopener">Query database →</a>
+                        <a href="https://r.xyz/glider-query-database/leaderboard" class="text-link" target="_blank" rel="noopener">Leaderboard →</a>
+                        <a href="https://github.com/jmenichole/jmenichole" class="text-link" target="_blank" rel="noopener">Profile README →</a>
                     </div>
                 </article>
-
-                <div class="chip-row">
-                    <span class="chip">Glider</span>
-                    <span class="chip">Solidity</span>
-                    <span class="chip">UUPS / Proxies</span>
-                    <span class="chip">Burp</span>
-                    <span class="chip">Bug bounty</span>
-                    <span class="chip">Python automation</span>
-                </div>
             </div>
         </section>
 
@@ -145,7 +113,7 @@
                     <article class="project-card">
                         <div class="project-card-head">
                             <h3>TiltCheck Ecosystem</h3>
-                            <span class="badge badge-muted">Flagship</span>
+                            <span class="label">Flagship</span>
                         </div>
                         <p>Modular Discord-first safety platform — scam detection, bonus tracking, trust engines for degen communities.</p>
                         <div class="tags">
@@ -160,7 +128,7 @@
                     <article class="project-card">
                         <div class="project-card-head">
                             <h3>JustTheTip</h3>
-                            <span class="badge badge-gold">$5K grant</span>
+                            <span class="label label-proof">$5K grant</span>
                         </div>
                         <p>Non-custodial Solana tipping for Discord — Rust contracts, TypeScript SDK, multi-token support.</p>
                         <div class="tags">
@@ -174,7 +142,7 @@
                     <article class="project-card">
                         <div class="project-card-head">
                             <h3>Bug Bounty Lab</h3>
-                            <span class="badge badge-muted">Research</span>
+                            <span class="label">Research</span>
                         </div>
                         <p>Gated bug bounty co-pilot — scope lock, recon playbooks, Glider query drafts, and batch tooling.</p>
                         <div class="tags">
@@ -235,20 +203,11 @@
             <div class="container contact-block">
                 <h2 class="section-title">Contact</h2>
                 <p class="section-desc">Open to security research collaborations, bug bounty partnerships, and selective freelance builds.</p>
-                <div class="contact-grid">
-                    <a href="mailto:jmenichole007@outlook.com" class="contact-item">
-                        <span class="contact-label">Email</span>
-                        <span>jmenichole007@outlook.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jmenichole0" class="contact-item" target="_blank" rel="noopener">
-                        <span class="contact-label">LinkedIn</span>
-                        <span>linkedin.com/in/jmenichole0</span>
-                    </a>
-                    <a href="https://github.com/jmenichole" class="contact-item" target="_blank" rel="noopener">
-                        <span class="contact-label">GitHub</span>
-                        <span>@jmenichole</span>
-                    </a>
-                </div>
+                <ul class="contact-list">
+                    <li><a href="mailto:jmenichole007@outlook.com">jmenichole007@outlook.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/jmenichole0" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/jmenichole" target="_blank" rel="noopener">GitHub @jmenichole</a></li>
+                </ul>
             </div>
         </section>
     </main>

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  document.querySelectorAll(".section, .hero-card, .feature-card, .project-card").forEach((el) => {
+  document.querySelectorAll(".section, .feature-card, .project-card").forEach((el) => {
     el.classList.add("reveal");
   });
 
@@ -49,29 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-  initGlitter();
 });
-
-function initGlitter() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  const field = document.getElementById("glitter-field");
-  if (!field) return;
-
-  const colors = ["#ffffff", "#e8c468", "#3dd6c6", "#a78bfa"];
-  const count = 14;
-
-  for (let i = 0; i < count; i++) {
-    const el = document.createElement("span");
-    el.className = "sparkle";
-    el.style.left = `${8 + Math.random() * 84}%`;
-    el.style.top = `${6 + Math.random() * 42}%`;
-    el.style.setProperty("--size", `${2 + Math.random() * 2.5}px`);
-    el.style.setProperty("--duration", `${3 + Math.random() * 4}s`);
-    el.style.setProperty("--delay", `${Math.random() * 5}s`);
-    el.style.setProperty("--peak", `${0.35 + Math.random() * 0.45}`);
-    el.style.setProperty("--sparkle-color", colors[i % colors.length]);
-    field.appendChild(el);
-  }
-}
