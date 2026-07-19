@@ -14,7 +14,7 @@ Personal portfolio site: Web3 security research, Glider Query DB contributions, 
 
 Static site — HTML, CSS, vanilla JS. Deployed via GitHub Pages.
 
-Visual direction: **Signal / Terminal** — cool paper + graphite ink + oxidized teal, full-bleed hero with Syne display type. Hero asset lives in `assets/`.
+Visual direction: dark graphite + teal accent, full-bleed hero, **Sora** for the name / display and **DM Sans** for body. Hero asset lives in `assets/`.
 
 ## Local preview
 
