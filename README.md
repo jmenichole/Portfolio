@@ -16,6 +16,8 @@ Static site — HTML, CSS, vanilla JS. Deployed via GitHub Pages.
 
 Visual direction: dark graphite + teal accent, full-bleed hero, **Sora** for the name / display and **DM Sans** for body. Hero asset lives in `assets/`.
 
+**Work archive:** [`work.html`](work.html) — tabbed lists for Security / Web3, Discord, Tools, and Experiments (`#security`, `#discord`, `#tools`, `#experiments`).
+
 ## Local preview
 
 ```bash
