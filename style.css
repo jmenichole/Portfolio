@@ -110,11 +110,10 @@ a:hover { text-decoration: underline; }
 /* Hero */
 .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: min(72vh, 40rem);
     display: flex;
-    align-items: flex-end;
-    padding: calc(var(--nav-h) + 2rem) 0 4rem;
+    align-items: center;
+    padding: calc(var(--nav-h) + 2.5rem) 0 3rem;
     color: #e9ece8;
     overflow: hidden;
     background: var(--bg-deep);
@@ -280,6 +279,15 @@ a:hover { text-decoration: underline; }
     border-left: 2px solid var(--accent);
     padding-left: 1rem;
     margin-top: 1.5rem;
+}
+
+.skills-line {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    margin: 1.25rem 0 0;
+    line-height: 1.7;
 }
 
 .mono {
@@ -488,6 +496,67 @@ a:hover { text-decoration: underline; }
     font-style: italic;
 }
 
+/* Work page */
+.work-header {
+    padding: calc(var(--nav-h) + 2.5rem) 0 1.5rem;
+}
+
+.work-header .section-title {
+    margin-bottom: 0.35rem;
+}
+
+.tabs {
+    padding-bottom: 4.5rem;
+}
+
+.tablist {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.25rem 1.5rem;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.75rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.tablist [role="tab"] {
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    padding: 0.75rem 0;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tablist [role="tab"]:hover {
+    color: var(--text);
+}
+
+.tablist [role="tab"][aria-selected="true"] {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+.tablist [role="tab"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+[role="tabpanel"] {
+    outline: none;
+}
+
+[role="tabpanel"][hidden] {
+    display: none;
+}
+
 /* Scroll */
 .scroll-progress {
     position: fixed;
@@ -583,9 +652,9 @@ a:hover { text-decoration: underline; }
     }
 
     .hero {
-        min-height: 100svh;
-        padding-top: calc(var(--nav-h) + 2.5rem);
-        padding-bottom: 3rem;
+        min-height: min(68svh, 36rem);
+        padding-top: calc(var(--nav-h) + 2rem);
+        padding-bottom: 2.5rem;
     }
 
     .hero h1 {

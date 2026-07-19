@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work — Jamie Vargas</title>
+    <meta name="description" content="Archive of Jamie Vargas public work by focus: Security / Web3, Discord, Tools, and Experiments.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">JV</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#security">Security</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="work.html" aria-current="page">Work</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="work-header">
+        <div class="container">
+            <h1 class="section-title">Work</h1>
+            <p class="section-desc">Public work by focus — curated where it matters, looser in Experiments.</p>
+        </div>
+    </header>
+
+    <main class="tabs" id="work-tabs">
+        <div class="container">
+            <div class="tablist" role="tablist" aria-label="Work categories">
+                <button type="button" role="tab" id="tab-security" aria-controls="panel-security" aria-selected="true" data-tab="security">Security / Web3</button>
+                <button type="button" role="tab" id="tab-discord" aria-controls="panel-discord" aria-selected="false" data-tab="discord" tabindex="-1">Discord</button>
+                <button type="button" role="tab" id="tab-tools" aria-controls="panel-tools" aria-selected="false" data-tab="tools" tabindex="-1">Tools</button>
+                <button type="button" role="tab" id="tab-experiments" aria-controls="panel-experiments" aria-selected="false" data-tab="experiments" tabindex="-1">Experiments</button>
+            </div>
+
+            <div role="tabpanel" id="panel-security" aria-labelledby="tab-security">
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>TiltCheck</h3>
+                            <span class="label">Featured</span>
+                        </div>
+                        <p>Modular Discord-first safety platform — scam detection, bonus tracking, and trust tooling.</p>
+                        <div class="tags"><span>TypeScript</span><span>Discord.js</span><span>React</span></div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/tiltcheck" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>JustTheTip</h3>
+                            <span class="label label-proof">Grant</span>
+                        </div>
+                        <p>Non-custodial Solana tipping for Discord — wallets, slash commands, encrypted keys.</p>
+                        <div class="tags"><span>Solana</span><span>Discord</span><span>Web3</span></div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/Justthetip" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>CollectClock</h3>
+                            <span class="label">Featured</span>
+                        </div>
+                        <p>Bonus collection PWA for social casinos — daily links, favorites, promo alerts.</p>
+                        <div class="tags"><span>JavaScript</span><span>PWA</span></div>
+                        <div class="card-links">
+                            <a href="https://tiltcheck-me.github.io/CollectClock/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/CollectClock" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>matchday-relic-blink</h3>
+                        </div>
+                        <p>Time-gated Solana Matchday Relic Blinks for a DEV Weekend challenge.</p>
+                        <div class="tags"><span>Solana</span><span>Blinks</span></div>
+                        <div class="card-links">
+                            <a href="https://matchday-relic-blink.vercel.app" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/matchday-relic-blink" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>Stake-Engine-Guidelines-Checker</h3>
+                        </div>
+                        <p>Checks game submissions against Stake Engine guidelines.</p>
+                        <div class="tags"><span>JavaScript</span><span>Compliance</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Stake-Engine-Guidelines-Checker/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Stake-Engine-Guidelines-Checker" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div role="tabpanel" id="panel-discord" aria-labelledby="tab-discord" hidden>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>justthebuilder</h3>
+                            <span class="label">Featured</span>
+                        </div>
+                        <p>AI-assisted Discord server setup — interview, blueprint, roles and channels.</p>
+                        <div class="tags"><span>Discord</span><span>AI</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/justthebuilder/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/justthebuilder" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>justthehelper</h3>
+                        </div>
+                        <p>Discord welcome, reminders, and paid private-thread tickets.</p>
+                        <div class="tags"><span>Discord</span><span>TypeScript</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/justthehelper/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/justthehelper" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>earncord</h3>
+                        </div>
+                        <p>Discord-linked earn/publish tooling with docs and privacy pages.</p>
+                        <div class="tags"><span>Discord</span><span>OAuth</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/earncord/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/earncord" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>FreeSpinsChannelBot</h3>
+                        </div>
+                        <p>Automates free-spin submission and announcement flows in Discord.</p>
+                        <div class="tags"><span>Discord</span><span>Bot</span></div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/FreeSpinsChannelBot" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>onboarding-discord-bot</h3>
+                        </div>
+                        <p>Discord bot for client onboarding flows.</p>
+                        <div class="tags"><span>Discord</span><span>Bot</span></div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/onboarding-discord-bot" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head">
+                            <h3>tiltcheck-royale</h3>
+                        </div>
+                        <p>Discord wagon battle royale with a live CRT spectator mode.</p>
+                        <div class="tags"><span>Discord</span><span>Game</span></div>
+                        <div class="card-links">
+                            <a href="https://github.com/jmenichole/tiltcheck-royale" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" hidden>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Portfolio-Necromancer</h3></div>
+                        <p>Resurrects dead portfolios from scattered work and scraps.</p>
+                        <div class="tags"><span>JavaScript</span><span>Tooling</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Portfolio-Necromancer/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Portfolio-Necromancer" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Scope-Creep</h3></div>
+                        <p>Locks freelance agreements with anti-scope-creep enforcement.</p>
+                        <div class="tags"><span>JavaScript</span><span>Freelance</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Scope-Creep/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Scope-Creep" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>DisposableVM</h3></div>
+                        <p>Disposable VM helper for quick isolated environments.</p>
+                        <div class="tags"><span>Tooling</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/DisposableVM/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/DisposableVM" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Template-Craft</h3></div>
+                        <p>AI-powered template generator.</p>
+                        <div class="tags"><span>AI</span><span>Templates</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Template-Craft/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Template-Craft" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Maker-Estimater</h3></div>
+                        <p>PWA for craft makers to calculate accurate pricing estimates.</p>
+                        <div class="tags"><span>PWA</span><span>JavaScript</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Maker-Estimater/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Maker-Estimater" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Rate-My-Client</h3></div>
+                        <p>Anonymous client red-flag sharing for freelancers.</p>
+                        <div class="tags"><span>JavaScript</span><span>Freelance</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Rate-My-Client/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Rate-My-Client" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div role="tabpanel" id="panel-experiments" aria-labelledby="tab-experiments" hidden>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>SubRoulette</h3></div>
+                        <p>Devpost hackathon game — match viral Reddit posts to subreddits.</p>
+                        <div class="tags"><span>React</span><span>Hackathon</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/SubRoulette/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/SubRoulette" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Museum-Mystery-The-Daily-Artifact</h3></div>
+                        <p>Snoo exploration game to find the daily artifact.</p>
+                        <div class="tags"><span>Game</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Museum-Mystery-The-Daily-Artifact/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Museum-Mystery-The-Daily-Artifact" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Rock-Spotter</h3></div>
+                        <p>Share and hunt interesting rocks.</p>
+                        <div class="tags"><span>Mobile</span><span>PWA</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Rock-Spotter/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Rock-Spotter" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>rockspotter</h3></div>
+                        <p>Vercel-hosted Rock Spotter variant.</p>
+                        <div class="tags"><span>Vercel</span></div>
+                        <div class="card-links">
+                            <a href="https://rockspotter.vercel.app" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/rockspotter" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>PorterPlays</h3></div>
+                        <p>Leaderboard and admin dashboard for Porter Plays affiliate sites.</p>
+                        <div class="tags"><span>Dashboard</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/PorterPlays/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/PorterPlays" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>porter-plays-leaderboard</h3></div>
+                        <p>Wager leaderboard for competitive casino gaming competitions.</p>
+                        <div class="tags"><span>Leaderboard</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/porter-plays-leaderboard/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/porter-plays-leaderboard" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>BakeOps</h3></div>
+                        <p>AI cake design helper for mockups, scheduling, and booking.</p>
+                        <div class="tags"><span>AI</span><span>Vercel</span></div>
+                        <div class="card-links">
+                            <a href="https://bakebot-sigma.vercel.app" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/BakeOps" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>B.O.T</h3></div>
+                        <p>Bake-me-a-cake bot experiment.</p>
+                        <div class="tags"><span>Bot</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/B.O.T/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/B.O.T" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-head"><h3>Random-Joke-Generator</h3></div>
+                        <p>Fetches a random joke.</p>
+                        <div class="tags"><span>JavaScript</span></div>
+                        <div class="card-links">
+                            <a href="https://jmenichole.github.io/Random-Joke-Generator/" target="_blank" rel="noopener">Live</a>
+                            <a href="https://github.com/jmenichole/Random-Joke-Generator" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Jamie Vargas</p>
+            <p class="footer-tagline">made for degens by degens · powered by coffee and code</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Back to top">↑</button>
+
+    <script src="work.js"></script>
+</body>
+</html>
