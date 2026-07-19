@@ -145,6 +145,14 @@ Under About prose (or end of About), one mono line:
 
 No pill chips / badge grid.
 
+### Footer
+
+Replace the current footer tagline with:
+
+`made for degens by degens`
+
+Same tagline on `index.html` and `work.html`.
+
 ## 7. Technical approach
 
 | File | Role |
