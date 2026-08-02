@@ -1,52 +1,248 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const nav = document.getElementById("nav");
-  const navToggle = document.getElementById("nav-toggle");
-  const navLinks = document.getElementById("nav-links");
-  const scrollTop = document.getElementById("scroll-top");
-  const progress = document.querySelector(".scroll-progress");
-
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    nav.classList.toggle("scrolled", y > 40);
-    scrollTop.classList.toggle("visible", y > 400);
-
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    if (progress && total > 0) {
-      progress.style.width = `${(y / total) * 100}%`;
-    }
-  });
-
-  navToggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(open));
-  });
-
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  scrollTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  document.querySelectorAll(".section, .feature-card, .project-card").forEach((el) => {
-    el.classList.add("reveal");
-  });
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Links Directory</title>
+    <style>
+        :root {
+            --bg-primary: #0f1115;
+            --bg-secondary: #1a1d24;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --vpn-badge: #ef4444;
+            --border-color: #2d3139;
         }
-      });
-    },
-    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
-  );
 
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-});
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-vpn {
+            background-color: rgba(239, 68, 68, 0.15);
+            color: var(--vpn-badge);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Bonus Collection</h1>
+        <p>Your daily source for sweepstakes, social casinos, and referral links.</p>
+    </header>
+
+    <main class="container">
+        <div id="links-grid" class="grid">
+            <!-- Cards will be injected here via JavaScript -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><a href="https://jmenichole.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">made for degens by degens</a></p>
+    </footer>
+
+    <script>
+        const bonusLinks = [
+            { name: "CardCrush", url: "https://www.cardcrush.com/lp/raf?r=db061927%2F45375369" },
+            { name: "Yotta", url: "https://join.withyotta.com/JMENICHOLE0" },
+            { name: "Coverd", url: "https://apps.apple.com/us/app/coverd/id6741347396" },
+            { name: "Winera", url: "https://winera.us?referralCode=Vf8jRF#signup" },
+            { name: "Acebet", url: "https://acebet.cc/welcome/r/jmenichole" },
+            { name: "Nuts.gg", url: "https://nuts.gg/play/jmenichole" },
+            { name: "Sharkroll", url: "https://www.sharkroll.io/en/?ref=A120A9538458" },
+            { name: "Coinsback Casino", url: "https://www.coinsbackcasino.com/invite/1556026?utm_source=copy&utm_medium=referral&utm_campaign=member-referral" },
+            { name: "Winna", url: "https://winna.com/?r=jmenichole" },
+            { name: "Qzino", url: "https://qzino.ai?r=QZER6326443" },
+            { name: "FireSevens", url: "https://firesevens.com/?invited_by=BEQM7P" },
+            { name: "Jumbo88", url: "https://www.jumbo88.com/signup?referralCode=6uff79" },
+            { name:"HelloMillions", url:"https://www.hellomillions.com/lp/raf?r=26d6760f%2F1236643867" },
+            { name:"SpinBlitz", url:"https://www.spinblitz.com/lp/raf?r=606f64a3%2F1246446739" },
+            { name:"MegaBonanza", url:"https://www.megabonanza.com/?r=72781897" },
+            { name:"RealPrize", url:"https://www.realprize.com/refer/317136" },
+            { name:"WOW Vegas", url:"https://www.wowvegas.com/?raf=3615494" },
+            { name:"Pulsz", url:"https://www.pulsz.com/?invited_by=utfk4r" },
+            { name:"Modo", url:"https://modo.us?referralCode=61MN6A" },
+            { name:"McLuck", url:"https://www.mcluck.com/lp/raf?r=61119407%2F908900038" },
+            { name:"Crown Coins", url:"https://crowncoinscasino.com/?utm_campaign=59048bf4-dbeb-4c58-b690-d7ad11bdb847&utm_source=friends" },
+            { name:"Chanced", url:"https://chanced.com/c/ysa096" },
+            { name:"Stake.us", url:"https://stake.us/?c=Jmenichole" },
+            { name:"Sportzino", url:"https://sportzino.com/signup/8a105ba6-7ada-45c8-b021-f478ac03c7c4" },
+            { name:"PlayFame", url:"https://www.playfame.com/lp/raf?r=1275975417" },
+            { name:"Pulsz Bingo", url:"https://www.pulszbingo.com/?invited_by=eg6mbf" },
+            { name:"Jackpota", url:"https://www.jackpota.com/?r=85453282" },
+            { name:"Zula Casino", url:"https://www.zulacasino.com/signup/221ddd92-862e-45d8-acc0-4cd2c26f7cdd" },
+            { name:"Fortune Coins", url:"https://www.fortunecoins.com/signup/3c08936f-8979-4f87-b377-efdbff519029" },
+            { name:"MyPrize", url:"https://myprize.us/invite/jmenichole" },
+            { name:"Clubs Poker", url:"https://play.clubs.poker/?referralCode=104192" },
+            { name:"Rolla", url:"https://www.rolla.com/?raf=3873" },
+            { name:"Lone Star Casino", url:"https://lonestarcasino.com/refer/678504" },
+            { name:"Spree", url:"https://spree.com/?r=1450539" },
+            { name:"SpinPals", url:"https://www.spinpals.com?referralcode=e851e1a8-c455-4a59-954d-b7fe0bbad04c" },
+            { name:"High 5 Casino", url:"https://high5casino.com/gc?adId=INV001%3AJmenichole" },
+            { name:"TrustDice", url:"https://trustdice.win/faucet/?ref=u_jmenichole", needsVPN: true },
+            { name:"Punt", url:"https://punt.com/c/cg60pd" },
+            { name:"FortuneWheelz", url:"https://fortunewheelz.com/?invited_by=P36ZS6" },
+            { name:"Zoot", url:"https://getzoot.us/?referralCode=ZOOTwithJMENICHOLE" },
+            { name:"Spinsala", url:"https://spinsala.com/en?invite=daym" },
+            { name:"Legendz", url:"https://legendz.com/?referred_by_id=221602" },
+            { name:"NoLimit Coins", url:"https://nolimitcoins.com/?invited_by=ZI1JIU" },
+            { name:"Gamba", url:"https://gamba.com?c=Jme", needsVPN: true },
+            { name:"American Luck", url:"https://americanluck.com/signup/e360918f-8986-4dec-9823-a902d3f4936a" },
+            { name:"Goated", url:"https://www.goated.com/r/YDRZLJ", needsVPN: true },
+            { name:"Shuffle", url:"https://shuffle.com?r=jHR7JnWRPF", needsVPN: true },
+            { name:"Stake (Global)", url:"https://www.stake.com/?c=LAYP68hb", needsVPN: true },
+            { name:"Clash.gg", url:"https://clash.gg/r/stakestats", needsVPN: true },
+            { name:"Cases.gg", url:"https://www.cases.gg/r/JMENICHOLE" },
+            { name:"Jemlit", url:"https://jemlit.com/en/a/Jmenichole" },
+            { name:"RoxyMoxy", url:"https://roxymoxy.com/home?invite=f94f874427" },
+            { name:"LuckyLand Slots", url:"https://luckylandslots.com" },
+            { name:"LuckyBits Vegas", url:"https://luckybitsvegas.com/gc?adId=INV001%3Ajmenichole" },
+            { name:"Shuffle.us", url:"https://shuffle.us?r=Rl93OJoflX" },
+            { name:"Kickr", url:"https://kickr.com/signup/doxe8c09" }
+        ];
+
+        function renderLinks() {
+            const grid = document.getElementById('links-grid');
+            
+            bonusLinks.forEach(link => {
+                const card = document.createElement('a');
+                card.href = link.url;
+                card.className = 'card';
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+
+                let badgesHTML = '';
+                
+                if (link.needsVPN) {
+                    badgesHTML += `<span class="badge badge-vpn">VPN Required</span>`;
+                }
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <h3>${link.name}</h3>
+                        <div class="badges-container">
+                            ${badgesHTML}
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderLinks);
+    </script>
+</body>
+</html>
